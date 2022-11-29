@@ -48,17 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBClass.cs" />
-    <Compile Include="EMPDetail.cs">
+    <Compile Include="empInfoDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EMPDetail.Designer.cs">
-      <DependentUpon>EMPDetail.cs</DependentUpon>
+    <Compile Include="empInfoDetail.Designer.cs">
+      <DependentUpon>empInfoDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="empGeunmu.cs">
+    <Compile Include="empWork.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="empGeunmu.Designer.cs">
-      <DependentUpon>empGeunmu.cs</DependentUpon>
+    <Compile Include="empWork.Designer.cs">
+      <DependentUpon>empWork.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,23 +72,23 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="jogicdo.cs">
+    <Compile Include="organizationChart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="jogicdo.Designer.cs">
-      <DependentUpon>jogicdo.cs</DependentUpon>
+    <Compile Include="organizationChart.Designer.cs">
+      <DependentUpon>organizationChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="huga.cs">
+    <Compile Include="vacation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="huga.Designer.cs">
-      <DependentUpon>huga.cs</DependentUpon>
+    <Compile Include="vacation.Designer.cs">
+      <DependentUpon>vacation.cs</DependentUpon>
     </Compile>
-    <Compile Include="myGeunmu.cs">
+    <Compile Include="myWork.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="myGeunmu.Designer.cs">
-      <DependentUpon>myGeunmu.cs</DependentUpon>
+    <Compile Include="myWork.Designer.cs">
+      <DependentUpon>myWork.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -96,11 +96,11 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="changeEMPInfo.cs">
+    <Compile Include="changeEmpInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="changeEMPInfo.Designer.cs">
-      <DependentUpon>changeEMPInfo.cs</DependentUpon>
+    <Compile Include="changeEmpInfo.Designer.cs">
+      <DependentUpon>changeEmpInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -110,11 +110,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EMPDetail.resx">
-      <DependentUpon>EMPDetail.cs</DependentUpon>
+    <EmbeddedResource Include="empInfoDetail.resx">
+      <DependentUpon>empInfoDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="empGeunmu.resx">
-      <DependentUpon>empGeunmu.cs</DependentUpon>
+    <EmbeddedResource Include="empWork.resx">
+      <DependentUpon>empWork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -122,20 +122,20 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="myGeunmu.resx">
-      <DependentUpon>myGeunmu.cs</DependentUpon>
+    <EmbeddedResource Include="myWork.resx">
+      <DependentUpon>myWork.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="jogicdo.resx">
-      <DependentUpon>jogicdo.cs</DependentUpon>
+    <EmbeddedResource Include="organizationChart.resx">
+      <DependentUpon>organizationChart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="huga.resx">
-      <DependentUpon>huga.cs</DependentUpon>
+    <EmbeddedResource Include="vacation.resx">
+      <DependentUpon>vacation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="changeEMPInfo.resx">
-      <DependentUpon>changeEMPInfo.cs</DependentUpon>
+    <EmbeddedResource Include="changeEmpInfo.resx">
+      <DependentUpon>changeEmpInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBCSProject
 {
-    public partial class myGeunmu : Form
+    public partial class empInfoDetail : Form
     {
-        public myGeunmu()
+        public empInfoDetail()
         {
             InitializeComponent();
         }

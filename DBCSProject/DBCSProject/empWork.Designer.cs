@@ -1,7 +1,7 @@
 ﻿
 namespace DBCSProject
 {
-    partial class empGeunmu
+    partial class empWork
     {
         /// <summary>
         /// Required designer variable.

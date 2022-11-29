@@ -1,7 +1,7 @@
 ﻿
 namespace DBCSProject
 {
-    partial class changeEMPInfo
+    partial class changeEmpInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -55,20 +55,10 @@ namespace DBCSProject
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.근태관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.근태현황ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.휴가신청ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.내근무조회ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.조직도ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.직원관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.직원정보수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.근무정보관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -82,298 +72,224 @@ namespace DBCSProject
             this.Column6,
             this.Column4,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(71, 138);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(57, 115);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1064, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(851, 273);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column2
             // 
             this.Column2.HeaderText = "사번";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "이름";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // 직급
             // 
             this.직급.HeaderText = "직급";
+            this.직급.MinimumWidth = 6;
             this.직급.Name = "직급";
+            this.직급.Width = 125;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "부서";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "전화번호";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "이메일";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "상태";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(156, 514);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(125, 428);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "사번";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(261, 510);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(209, 425);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 28);
+            this.textBox1.Size = new System.Drawing.Size(114, 25);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 579);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(125, 482);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 18);
+            this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "이름";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(261, 574);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(209, 478);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 28);
+            this.textBox2.Size = new System.Drawing.Size(114, 25);
             this.textBox2.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 642);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(125, 535);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 18);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "직급";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(261, 638);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(209, 532);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 28);
+            this.textBox3.Size = new System.Drawing.Size(114, 25);
             this.textBox3.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(156, 710);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(125, 592);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 18);
+            this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "부서";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(261, 705);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(209, 587);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 28);
+            this.textBox4.Size = new System.Drawing.Size(114, 25);
             this.textBox4.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(511, 514);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(409, 428);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 18);
+            this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 2;
             this.label5.Text = "전화번호";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(617, 510);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Location = new System.Drawing.Point(494, 425);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(141, 28);
+            this.textBox5.Size = new System.Drawing.Size(114, 25);
             this.textBox5.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(511, 579);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(409, 482);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 18);
+            this.label6.Size = new System.Drawing.Size(52, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "이메일";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(617, 574);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Location = new System.Drawing.Point(494, 478);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(141, 28);
+            this.textBox6.Size = new System.Drawing.Size(114, 25);
             this.textBox6.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(511, 642);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(409, 535);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 18);
+            this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 2;
             this.label7.Text = "상태";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(617, 638);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Location = new System.Drawing.Point(494, 532);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(141, 28);
+            this.textBox7.Size = new System.Drawing.Size(114, 25);
             this.textBox7.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(511, 710);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(409, 592);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 18);
+            this.label8.Size = new System.Drawing.Size(37, 15);
             this.label8.TabIndex = 2;
             this.label8.Text = "이름";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(617, 705);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Location = new System.Drawing.Point(494, 587);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(141, 28);
+            this.textBox8.Size = new System.Drawing.Size(114, 25);
             this.textBox8.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(906, 579);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(725, 482);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 34);
+            this.button1.Size = new System.Drawing.Size(86, 28);
             this.button1.TabIndex = 4;
             this.button1.Text = "추가";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(906, 645);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(725, 537);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 34);
+            this.button2.Size = new System.Drawing.Size(86, 28);
             this.button2.TabIndex = 4;
             this.button2.Text = "수정";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.근태관리ToolStripMenuItem,
-            this.조직도ToolStripMenuItem,
-            this.직원관리ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1201, 25);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 근태관리ToolStripMenuItem
-            // 
-            this.근태관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.근태현황ToolStripMenuItem,
-            this.휴가신청ToolStripMenuItem,
-            this.내근무조회ToolStripMenuItem});
-            this.근태관리ToolStripMenuItem.Name = "근태관리ToolStripMenuItem";
-            this.근태관리ToolStripMenuItem.Size = new System.Drawing.Size(67, 19);
-            this.근태관리ToolStripMenuItem.Text = "근태관리";
-            // 
-            // 근태현황ToolStripMenuItem
-            // 
-            this.근태현황ToolStripMenuItem.Name = "근태현황ToolStripMenuItem";
-            this.근태현황ToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.근태현황ToolStripMenuItem.Text = "근태현황";
-            // 
-            // 휴가신청ToolStripMenuItem
-            // 
-            this.휴가신청ToolStripMenuItem.Name = "휴가신청ToolStripMenuItem";
-            this.휴가신청ToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.휴가신청ToolStripMenuItem.Text = "휴가신청";
-            // 
-            // 내근무조회ToolStripMenuItem
-            // 
-            this.내근무조회ToolStripMenuItem.Name = "내근무조회ToolStripMenuItem";
-            this.내근무조회ToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.내근무조회ToolStripMenuItem.Text = "내 근무 조회";
-            // 
-            // 조직도ToolStripMenuItem
-            // 
-            this.조직도ToolStripMenuItem.Name = "조직도ToolStripMenuItem";
-            this.조직도ToolStripMenuItem.Size = new System.Drawing.Size(55, 19);
-            this.조직도ToolStripMenuItem.Text = "조직도";
-            // 
-            // 직원관리ToolStripMenuItem
-            // 
-            this.직원관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.직원정보수정ToolStripMenuItem,
-            this.근무정보관리ToolStripMenuItem});
-            this.직원관리ToolStripMenuItem.Name = "직원관리ToolStripMenuItem";
-            this.직원관리ToolStripMenuItem.Size = new System.Drawing.Size(67, 19);
-            this.직원관리ToolStripMenuItem.Text = "직원관리";
-            // 
-            // 직원정보수정ToolStripMenuItem
-            // 
-            this.직원정보수정ToolStripMenuItem.Name = "직원정보수정ToolStripMenuItem";
-            this.직원정보수정ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.직원정보수정ToolStripMenuItem.Text = "직원 정보 관리";
-            // 
-            // 근무정보관리ToolStripMenuItem
-            // 
-            this.근무정보관리ToolStripMenuItem.Name = "근무정보관리ToolStripMenuItem";
-            this.근무정보관리ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.근무정보관리ToolStripMenuItem.Text = "근무 정보 관리";
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(906, 514);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(725, 428);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 34);
+            this.button3.Size = new System.Drawing.Size(86, 28);
             this.button3.TabIndex = 4;
             this.button3.Text = "검색";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(906, 702);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(725, 585);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 52);
+            this.button4.Size = new System.Drawing.Size(86, 43);
             this.button4.TabIndex = 4;
             this.button4.Text = "부가정보 보기";
             this.button4.UseVisualStyleBackColor = true;
@@ -382,20 +298,18 @@ namespace DBCSProject
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("굴림", 30F);
-            this.label9.Location = new System.Drawing.Point(384, 52);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(307, 43);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(283, 40);
+            this.label9.Size = new System.Drawing.Size(356, 50);
             this.label9.TabIndex = 29;
             this.label9.Text = "직원 정보 관리";
             // 
-            // changeEMPInfo
+            // changeEmpInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 795);
+            this.ClientSize = new System.Drawing.Size(961, 662);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -417,12 +331,9 @@ namespace DBCSProject
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "changeEMPInfo";
+            this.Name = "changeEmpInfo";
             this.Text = "직원 정보 관리";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,15 +366,6 @@ namespace DBCSProject
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 근태관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 근태현황ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 조직도ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 직원관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 직원정보수정ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 근무정보관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 휴가신청ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 내근무조회ToolStripMenuItem;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label9;

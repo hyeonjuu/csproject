@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBCSProject
 {
-    public partial class changeEMPInfo : Form
+    public partial class changeEmpInfo : Form
     {
-        public changeEMPInfo()
+        public changeEmpInfo()
         {
             InitializeComponent();
         }

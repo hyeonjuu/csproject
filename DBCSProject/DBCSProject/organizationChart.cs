@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace DBCSProject
 {
-    public partial class EMPDetail : Form
+    public partial class organizationChart : Form
     {
-        public EMPDetail()
+        public organizationChart()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }

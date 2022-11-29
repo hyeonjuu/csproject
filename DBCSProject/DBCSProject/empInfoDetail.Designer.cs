@@ -1,7 +1,7 @@
 ﻿
 namespace DBCSProject
 {
-    partial class EMPDetail
+    partial class empInfoDetail
     {
         /// <summary>
         /// Required designer variable.

@@ -53,37 +53,46 @@ namespace DBCSProject
                 MessageBox.Show(DE.Message);
             }
         }
-        public void getAttendance()
+        public int getAttendance()
         {
             try
             {
                 
                 string today = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString()+"/" + DateTime.Today.Day.ToString();
-                sqlstr = "Select atndtype from attendance where empno = :empno and atnddate = :atnddate";
-             
+                sqlstr = "Select atndtype from attendance where empno = :empno and atnddate = sysdate";
+                dbc.DS.Tables["attendance"].Clear();
                 dbc.DCom.CommandText = sqlstr;
-                dbc.DCom.Parameters.Add("empno", OracleDbType.Varchar2).Value = dbc.EMPNO;
-                dbc.DCom.Parameters.Add("date", OracleDbType.Varchar2).Value = today;
+                dbc.DCom.Parameters.Add("empno", OracleDbType.Varchar2).Value = "2022001";
+                dbc.DA.SelectCommand = dbc.DCom;
+                dbc.DA.Fill(dbc.DS, "attendance");
+                
                 dbc.DR = dbc.DCom.ExecuteReader();
 
-                if (dbc.DR.Read()) {
-
-                    todayStatus = dbc.DR.GetValue(0).ToString();
-                    status.Text = dbc.DR.GetValue(0).ToString();
-                    if(status.Text != "")
-                    {
-                        button1.Enabled = false;                    }
-                }
-                else
+               /* while (dbc.DR.Read())
                 {
-                    status.Text = "출근 전 입니다.";
-                }
+                    int i = 0;
+                    todayStatus = dbc.DR.GetValue(i).ToString();
+                    status.Text = dbc.DR.GetValue(i).ToString();
+                    if (status.Text == "휴가" || status.Text == "조퇴" || status.Text == "퇴근")
+                    {
+                        button1.Enabled = false;
+                        return 1;
+                    }
 
+                    else
+                    {
+                        status.Text = "출근 전 입니다.";
+                        return 0;
+                    }
+                    i++;
+                }*/
+                
             } 
             catch(DataException DE)
             {
                 MessageBox.Show(DE.Message);
             }
+            return -1;
         }
 
         public void thisMonthWork()
@@ -176,11 +185,48 @@ namespace DBCSProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try { 
             if(DateTime.Now.Hour < 8)
             {
                MessageBox.Show("8시 이전엔 출근 등록을 할 수 없습니다.","알림");
             }
-            
+
+                /*                
+                                sqlstr = "Select * from attendance where empno = '" + dbc.EMPNO + "' and atnddate = '" + today + "'";
+                                dbc.DCom.CommandText = sqlstr;
+                                dbc.DA.SelectCommand = dbc.DCom;
+                                dbc.DA.Fill(dbc.DS, "attendance");
+
+
+
+                                DataRow currRow = dbc.DS.Tables["attendance"].Rows[0];
+                                button1.Text = currRow["atndtype"].ToString();*/
+                string today = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Day.ToString();
+                
+                int result = getAttendance();
+                if(result == 0)
+                {
+                    sqlstr = "insert into attendance(empno,atnddate,atndtype,atndstarttime) value (:empno,:atnddate,:atndtype,:atndstarttime)";
+
+                    dbc.DCom.CommandText = sqlstr;
+                    dbc.DCom.Parameters.Add("empno", OracleDbType.Varchar2).Value = dbc.EMPNO;
+                    dbc.DCom.Parameters.Add("atnddate", OracleDbType.Varchar2).Value = today;
+                    dbc.DCom.Parameters.Add("atndtype", OracleDbType.Varchar2).Value = "출근";
+                    dbc.DCom.Parameters.Add("atndstarttime", OracleDbType.Varchar2).Value = "to_char(systimestamp,'hh:mi:ss')";
+
+                    dbc.DCom.ExecuteNonQuery();
+                }
+
+
+            }
+            catch (IndexOutOfRangeException)
+            {
+
+                button1.Text = "없어요";
+            }
+
+
+
         }
 
 
