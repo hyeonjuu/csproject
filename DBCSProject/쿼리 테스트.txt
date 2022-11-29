@@ -1,0 +1,17 @@
+merge into attendance a
+using dual
+    on( a.empno = '2022001' and a.atnddate = '22/11/22')
+    when matched then
+    update set a.atndtype = '퇴근', a.stoptime = to_char(systimestamp,'hh:mi:ss')
+when not matched then
+    insert (a.empno,a.atnddate,a.atndtype,a.starttime) values(2022001,'22/11/22','출근',to_char(systimestamp,'hh:mi:ss'));
+    
+update attendance
+set status = 
+case
+when round((to_date('18:00:00','hh24:mi:ss') - to_date('17:00:00','hh24:mi:ss'))* 24* 60 * 60) > 0 then '조퇴'
+when round((to_date('18:00:00','hh24:mi:ss') - to_date('17:00:00','hh24:mi:ss'))* 24* 60 * 60) <= 0 then '정상'
+end
+where empno = '2022001' and atnddate = '22/11/22';
+
+select round((to_date('18:00:00','hh24:mi:ss') - to_date('17:59:59','hh24:mi:ss'))* 24* 60*60) from dual;
