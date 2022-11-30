@@ -79,7 +79,6 @@ C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProje
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.organizationChart.resources
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.vacation.resources
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.csprojAssemblyReference.cache
-C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.empInfoDetail.resources
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.empWork.resources
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.Form1.resources
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.Form2.resources
@@ -98,3 +97,4 @@ C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\DBCSProject.
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\DBCSProject.exe
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\DBCSProject.pdb
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.csproj.CopyComplete
+C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.EMPDetail.resources

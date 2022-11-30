@@ -19,15 +19,8 @@ namespace DBCSProject
         DataTable empTable;
 
         EMPDetail EMPDetail;
-        jogicdo jogicdo;
 
-        public changeEMPInfo()
-        {
-            InitializeComponent();
-            dbc.DB_ObjCreate();
-            dbc.DB_Open();
-            dbc.DB_Access();
-        }
+  
         public changeEMPInfo(string empno)
         {
             InitializeComponent();

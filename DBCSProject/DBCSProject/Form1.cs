@@ -14,7 +14,7 @@ namespace DBCSProject
     {
         main main;
         organizationChart organizationChart;
-        changeEmpInfo changeEmpInfo;
+        changeEMPInfo changeEmpInfo;
         empWork empWork;
         myWork myWork;
         vacation vacation;
@@ -100,7 +100,7 @@ namespace DBCSProject
         {
             if(changeEmpInfo == null || changeEmpInfo.IsDisposed)
             {
-                changeEmpInfo = new changeEmpInfo();
+                changeEmpInfo = new changeEMPInfo(empno);
                 changeEmpInfo.MdiParent = this;
                 changeEmpInfo.WindowState = FormWindowState.Maximized;
                 changeEmpInfo.Show();

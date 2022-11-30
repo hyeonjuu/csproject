@@ -46,20 +46,10 @@ namespace DBCSProject
             this.pStatus = new System.Windows.Forms.TextBox();
             this.appendBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.근태관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.근태현황ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.휴가신청ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.내근무조회ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.조직도ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.직원관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.직원정보수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.근무정보관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBtn = new System.Windows.Forms.Button();
             this.empdetailBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -216,74 +206,6 @@ namespace DBCSProject
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.근태관리ToolStripMenuItem,
-            this.조직도ToolStripMenuItem,
-            this.직원관리ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(841, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 근태관리ToolStripMenuItem
-            // 
-            this.근태관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.근태현황ToolStripMenuItem,
-            this.휴가신청ToolStripMenuItem,
-            this.내근무조회ToolStripMenuItem});
-            this.근태관리ToolStripMenuItem.Name = "근태관리ToolStripMenuItem";
-            this.근태관리ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.근태관리ToolStripMenuItem.Text = "근태관리";
-            // 
-            // 근태현황ToolStripMenuItem
-            // 
-            this.근태현황ToolStripMenuItem.Name = "근태현황ToolStripMenuItem";
-            this.근태현황ToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.근태현황ToolStripMenuItem.Text = "근태현황";
-            // 
-            // 휴가신청ToolStripMenuItem
-            // 
-            this.휴가신청ToolStripMenuItem.Name = "휴가신청ToolStripMenuItem";
-            this.휴가신청ToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.휴가신청ToolStripMenuItem.Text = "휴가신청";
-            // 
-            // 내근무조회ToolStripMenuItem
-            // 
-            this.내근무조회ToolStripMenuItem.Name = "내근무조회ToolStripMenuItem";
-            this.내근무조회ToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.내근무조회ToolStripMenuItem.Text = "내 근무 조회";
-            // 
-            // 조직도ToolStripMenuItem
-            // 
-            this.조직도ToolStripMenuItem.Name = "조직도ToolStripMenuItem";
-            this.조직도ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.조직도ToolStripMenuItem.Text = "조직도";
-            this.조직도ToolStripMenuItem.Click += new System.EventHandler(this.조직도ToolStripMenuItem_Click);
-            // 
-            // 직원관리ToolStripMenuItem
-            // 
-            this.직원관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.직원정보수정ToolStripMenuItem,
-            this.근무정보관리ToolStripMenuItem});
-            this.직원관리ToolStripMenuItem.Name = "직원관리ToolStripMenuItem";
-            this.직원관리ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.직원관리ToolStripMenuItem.Text = "직원관리";
-            // 
-            // 직원정보수정ToolStripMenuItem
-            // 
-            this.직원정보수정ToolStripMenuItem.Name = "직원정보수정ToolStripMenuItem";
-            this.직원정보수정ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.직원정보수정ToolStripMenuItem.Text = "직원 정보 관리";
-            // 
-            // 근무정보관리ToolStripMenuItem
-            // 
-            this.근무정보관리ToolStripMenuItem.Name = "근무정보관리ToolStripMenuItem";
-            this.근무정보관리ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.근무정보관리ToolStripMenuItem.Text = "근무 정보 관리";
-            // 
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -321,9 +243,9 @@ namespace DBCSProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(841, 530);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.empdetailBtn);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.searchBtn);
@@ -347,8 +269,6 @@ namespace DBCSProject
             this.Text = "직원 정보 관리";
             this.Load += new System.EventHandler(this.changeEMPInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,15 +292,6 @@ namespace DBCSProject
         private System.Windows.Forms.TextBox pStatus;
         private System.Windows.Forms.Button appendBtn;
         private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 근태관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 근태현황ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 조직도ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 직원관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 직원정보수정ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 근무정보관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 휴가신청ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 내근무조회ToolStripMenuItem;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button empdetailBtn;
         private System.Windows.Forms.Label label9;
