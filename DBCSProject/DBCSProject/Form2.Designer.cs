@@ -42,6 +42,7 @@ namespace DBCSProject
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("돋움", 9F);
             this.label2.Location = new System.Drawing.Point(638, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 12);
@@ -50,6 +51,7 @@ namespace DBCSProject
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("돋움", 9F);
             this.dateTimePicker2.Location = new System.Drawing.Point(350, 126);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(220, 21);
@@ -57,6 +59,7 @@ namespace DBCSProject
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("돋움", 9F);
             this.dateTimePicker1.Location = new System.Drawing.Point(350, 199);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(220, 21);

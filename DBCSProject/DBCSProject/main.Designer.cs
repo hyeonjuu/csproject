@@ -32,7 +32,7 @@ namespace DBCSProject
             this.components = new System.ComponentModel.Container();
             this.today = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.note = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.currentLabel = new System.Windows.Forms.Label();
             this.planLabel = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@ namespace DBCSProject
             // 
             // today
             // 
-            this.today.Font = new System.Drawing.Font("한컴 고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.today.Font = new System.Drawing.Font("돋움", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.today.Location = new System.Drawing.Point(29, 135);
             this.today.Name = "today";
             this.today.Size = new System.Drawing.Size(342, 76);
@@ -62,7 +62,7 @@ namespace DBCSProject
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.Font = new System.Drawing.Font("굴림", 30F);
+            this.button1.Font = new System.Drawing.Font("돋움", 30F);
             this.button1.Location = new System.Drawing.Point(50, 357);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(321, 63);
@@ -71,14 +71,15 @@ namespace DBCSProject
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // note
             // 
-            this.textBox1.Location = new System.Drawing.Point(50, 295);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 45);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "특이사항";
+            this.note.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.note.Location = new System.Drawing.Point(50, 295);
+            this.note.Multiline = true;
+            this.note.Name = "note";
+            this.note.Size = new System.Drawing.Size(320, 45);
+            this.note.TabIndex = 3;
+            this.note.Text = "특이사항";
             // 
             // progressBar1
             // 
@@ -91,6 +92,7 @@ namespace DBCSProject
             // 
             // currentLabel
             // 
+            this.currentLabel.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.currentLabel.Location = new System.Drawing.Point(434, 128);
             this.currentLabel.Name = "currentLabel";
             this.currentLabel.Size = new System.Drawing.Size(136, 19);
@@ -99,6 +101,7 @@ namespace DBCSProject
             // 
             // planLabel
             // 
+            this.planLabel.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.planLabel.Location = new System.Drawing.Point(610, 125);
             this.planLabel.Name = "planLabel";
             this.planLabel.Size = new System.Drawing.Size(122, 19);
@@ -109,8 +112,8 @@ namespace DBCSProject
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(526, 241);
+            this.label4.Font = new System.Drawing.Font("돋움", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(530, 248);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 6;
@@ -130,7 +133,7 @@ namespace DBCSProject
             // 
             // empInfo
             // 
-            this.empInfo.Font = new System.Drawing.Font("한컴 고딕", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empInfo.Font = new System.Drawing.Font("돋움", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empInfo.Location = new System.Drawing.Point(43, 67);
             this.empInfo.Name = "empInfo";
             this.empInfo.Size = new System.Drawing.Size(328, 48);
@@ -141,8 +144,8 @@ namespace DBCSProject
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(98, 0);
+            this.label6.Font = new System.Drawing.Font("돋움", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(109, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 20);
             this.label6.TabIndex = 6;
@@ -150,7 +153,7 @@ namespace DBCSProject
             // 
             // status
             // 
-            this.status.Font = new System.Drawing.Font("한컴 고딕", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.status.Font = new System.Drawing.Font("돋움", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.status.Location = new System.Drawing.Point(43, 225);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(328, 57);
@@ -164,7 +167,7 @@ namespace DBCSProject
             // 
             // WSCurrent
             // 
-            this.WSCurrent.Font = new System.Drawing.Font("굴림", 15F);
+            this.WSCurrent.Font = new System.Drawing.Font("돋움", 15F);
             this.WSCurrent.Location = new System.Drawing.Point(437, 147);
             this.WSCurrent.Name = "WSCurrent";
             this.WSCurrent.Size = new System.Drawing.Size(133, 19);
@@ -174,7 +177,7 @@ namespace DBCSProject
             // 
             // WSPlan
             // 
-            this.WSPlan.Font = new System.Drawing.Font("굴림", 15F);
+            this.WSPlan.Font = new System.Drawing.Font("돋움", 15F);
             this.WSPlan.Location = new System.Drawing.Point(613, 147);
             this.WSPlan.Name = "WSPlan";
             this.WSPlan.Size = new System.Drawing.Size(119, 19);
@@ -204,7 +207,7 @@ namespace DBCSProject
             this.Controls.Add(this.WSCurrent);
             this.Controls.Add(this.currentLabel);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.note);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.empInfo);
             this.Controls.Add(this.status);
@@ -224,7 +227,7 @@ namespace DBCSProject
         #endregion
         private System.Windows.Forms.Label today;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox note;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label currentLabel;
         private System.Windows.Forms.Label planLabel;

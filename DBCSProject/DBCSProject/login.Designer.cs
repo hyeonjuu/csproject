@@ -33,11 +33,11 @@ namespace DBCSProject
             this.password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // id
             // 
+            this.id.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.id.Location = new System.Drawing.Point(384, 123);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(181, 21);
@@ -46,16 +46,19 @@ namespace DBCSProject
             // 
             // password
             // 
+            this.password.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.password.Location = new System.Drawing.Point(384, 176);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(181, 21);
             this.password.TabIndex = 2;
             this.password.Text = "비밀번호";
+            this.password.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("돋움", 39F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("돋움", 39F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.label1.Location = new System.Drawing.Point(22, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 52);
@@ -64,29 +67,23 @@ namespace DBCSProject
             // 
             // loginBtn
             // 
+            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.loginBtn.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Bold);
+            this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.Location = new System.Drawing.Point(384, 238);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(181, 47);
             this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "로그인";
-            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(432, 306);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 12);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "비밀번호 찾기";
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(663, 367);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.password);
             this.Controls.Add(this.id);
@@ -104,7 +101,6 @@ namespace DBCSProject
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button loginBtn;
-        private System.Windows.Forms.Label label2;
     }
 }
 
