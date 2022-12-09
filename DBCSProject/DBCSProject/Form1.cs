@@ -16,7 +16,7 @@ namespace DBCSProject
         organizationChart organizationChart;
         changeEMPInfo changeEmpInfo;
         empWork empWork;
-        myWork myWork;
+        MyWork myWork;
         vacation vacation;
 
         private string empno;
@@ -71,7 +71,9 @@ namespace DBCSProject
         {
             if (myWork == null || myWork.IsDisposed)
             {
-                myWork = new myWork();
+                this.Width = 1220;
+                this.Height = 600;
+                myWork = new MyWork(empno);
                 myWork.MdiParent = this;
                 myWork.WindowState = FormWindowState.Maximized;
                 myWork.Show();

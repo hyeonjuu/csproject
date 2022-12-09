@@ -46,9 +46,7 @@ namespace DBCSProject
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,7 +56,8 @@ namespace DBCSProject
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(878, 486);
+            this.button1.Font = new System.Drawing.Font("돋움", 9F);
+            this.button1.Location = new System.Drawing.Point(506, 492);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 38);
@@ -70,7 +69,8 @@ namespace DBCSProject
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(999, 448);
+            this.radioButton2.Font = new System.Drawing.Font("돋움", 9F);
+            this.radioButton2.Location = new System.Drawing.Point(627, 454);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(73, 19);
@@ -82,7 +82,8 @@ namespace DBCSProject
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(878, 448);
+            this.radioButton1.Font = new System.Drawing.Font("돋움", 9F);
+            this.radioButton1.Location = new System.Drawing.Point(506, 454);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(58, 19);
@@ -98,7 +99,7 @@ namespace DBCSProject
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(51, 166);
+            this.dataGridView1.Location = new System.Drawing.Point(837, 197);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -129,7 +130,8 @@ namespace DBCSProject
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(878, 306);
+            this.textBox1.Font = new System.Drawing.Font("돋움", 9F);
+            this.textBox1.Location = new System.Drawing.Point(506, 312);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -139,7 +141,8 @@ namespace DBCSProject
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(793, 310);
+            this.label8.Font = new System.Drawing.Font("돋움", 9F);
+            this.label8.Location = new System.Drawing.Point(421, 316);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 15);
             this.label8.TabIndex = 64;
@@ -148,7 +151,8 @@ namespace DBCSProject
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(774, 424);
+            this.label9.Font = new System.Drawing.Font("돋움", 9F);
+            this.label9.Location = new System.Drawing.Point(386, 421);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 15);
             this.label9.TabIndex = 65;
@@ -156,7 +160,8 @@ namespace DBCSProject
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(878, 255);
+            this.textBox4.Font = new System.Drawing.Font("돋움", 9F);
+            this.textBox4.Location = new System.Drawing.Point(506, 261);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(226, 25);
@@ -165,7 +170,8 @@ namespace DBCSProject
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(793, 259);
+            this.label4.Font = new System.Drawing.Font("돋움", 9F);
+            this.label4.Location = new System.Drawing.Point(421, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 66;
@@ -173,7 +179,8 @@ namespace DBCSProject
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(878, 216);
+            this.textBox3.Font = new System.Drawing.Font("돋움", 9F);
+            this.textBox3.Location = new System.Drawing.Point(506, 222);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(226, 25);
@@ -182,7 +189,8 @@ namespace DBCSProject
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(793, 220);
+            this.label5.Font = new System.Drawing.Font("돋움", 9F);
+            this.label5.Location = new System.Drawing.Point(421, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 63;
@@ -190,7 +198,8 @@ namespace DBCSProject
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(878, 174);
+            this.textBox2.Font = new System.Drawing.Font("돋움", 9F);
+            this.textBox2.Location = new System.Drawing.Point(506, 180);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(226, 25);
@@ -199,7 +208,8 @@ namespace DBCSProject
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(793, 178);
+            this.label7.Font = new System.Drawing.Font("돋움", 9F);
+            this.label7.Location = new System.Drawing.Point(421, 184);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 62;
@@ -208,40 +218,26 @@ namespace DBCSProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("한컴 고딕", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(398, 65);
+            this.label1.Font = new System.Drawing.Font("돋움", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(368, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 65);
+            this.label1.Size = new System.Drawing.Size(364, 50);
             this.label1.TabIndex = 61;
             this.label1.Text = "직원 근무 현황";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(423, 448);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(251, 25);
-            this.dateTimePicker1.TabIndex = 60;
-            // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(423, 166);
+            this.monthCalendar1.Font = new System.Drawing.Font("돋움", 9F);
+            this.monthCalendar1.Location = new System.Drawing.Point(81, 197);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 59;
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(423, 384);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(251, 25);
-            this.dateTimePicker2.TabIndex = 60;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(473, 509);
+            this.label2.Font = new System.Drawing.Font("돋움", 9F);
+            this.label2.Location = new System.Drawing.Point(95, 428);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 15);
             this.label2.TabIndex = 62;
@@ -251,9 +247,10 @@ namespace DBCSProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(623, 509);
+            this.label3.Font = new System.Drawing.Font("돋움", 9F);
+            this.label3.Location = new System.Drawing.Point(258, 428);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 15);
+            this.label3.Size = new System.Drawing.Size(25, 15);
             this.label3.TabIndex = 62;
             this.label3.Text = "50";
             this.label3.Click += new System.EventHandler(this.label2_Click);
@@ -261,7 +258,8 @@ namespace DBCSProject
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(793, 450);
+            this.label6.Font = new System.Drawing.Font("돋움", 9F);
+            this.label6.Location = new System.Drawing.Point(421, 456);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 15);
             this.label6.TabIndex = 65;
@@ -269,7 +267,8 @@ namespace DBCSProject
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(878, 412);
+            this.textBox5.Font = new System.Drawing.Font("돋움", 9F);
+            this.textBox5.Location = new System.Drawing.Point(506, 418);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(226, 25);
@@ -298,8 +297,6 @@ namespace DBCSProject
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.monthCalendar1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "empWork";
@@ -329,9 +326,7 @@ namespace DBCSProject
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;

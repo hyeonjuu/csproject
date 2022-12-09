@@ -42,9 +42,9 @@ namespace DBCSProject
                 dbc.DCom.CommandText = sqlstr;
                 dbc.DA.SelectCommand = dbc.DCom;
                 dbc.DA.Fill(dbc.DS, "emp");
-                dbc.PhoneTable = dbc.DS.Tables["emp"];
+                dbc.Table = dbc.DS.Tables["emp"];
                 
-                DataRow currRow = dbc.PhoneTable.Rows[0];
+                DataRow currRow = dbc.Table.Rows[0];
 
                 empInfo.Text = currRow["name"] + " : " + currRow["rank"];
             }
@@ -212,7 +212,7 @@ namespace DBCSProject
                 string today = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Day.ToString();
                 if (todayStatus == null) { 
 
-                sqlstr = "insert into attendance(empno,atnddate,atndtype,starttime,note) values('"+dbc.EMPNO + "',to_char(sysdate,'yy/mm/dd'),'출근',to_char(systimestamp,'hh:mi:ss'),'"+note.Text+"')";
+                sqlstr = "insert into attendance(empno,atnddate,atndtype,starttime,note,confirm) values('"+dbc.EMPNO + "',to_char(sysdate,'yy/mm/dd'),'출근',to_char(systimestamp,'hh:mi:ss'),'"+note.Text+"','미승인')";
                     dbc.DCom.CommandText = sqlstr;
                     dbc.DCom.ExecuteNonQuery();
                     todayStatus = "근무 중";
