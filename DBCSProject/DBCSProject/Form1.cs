@@ -84,22 +84,7 @@ namespace DBCSProject
             }
         }
 
-        private void 직원근태현황ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (empWork == null || empWork.IsDisposed)
-            {
-                empWork = new empWork();
-                empWork.MdiParent = this;
-                empWork.WindowState = FormWindowState.Maximized;
-                empWork.Show();
-                
-
-            }
-            else
-            {
-                empWork.Activate();
-            }
-        }
+       
 
         private void 직원휴가승인ToolStripMenuItem_Click(object sender, EventArgs e)
         {
