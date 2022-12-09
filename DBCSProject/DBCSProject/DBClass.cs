@@ -14,6 +14,8 @@ namespace DBCSProject
         private string empno; // 사원 번호
         private string admin; //관리자 여부
 
+        private int selectedKeyValue;
+
         private String ret;
         private String sql;
 
@@ -36,6 +38,7 @@ namespace DBCSProject
 
         public String CONNECTIONSTRING { get { return connectionString; } set { connectionString = value; } }
         public String COMMANDSTRING { get { return commandString; } set { commandString = value; } }
+        public int SelectedKeyValue { get { return selectedKeyValue; } set { selectedKeyValue = value; } }
 
 
         public OracleConnection Con { get { return con; } set { con = value; } }
