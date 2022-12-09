@@ -51,6 +51,8 @@ namespace DBCSProject
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -265,12 +267,35 @@ namespace DBCSProject
             this.textBox5.Size = new System.Drawing.Size(198, 21);
             this.textBox5.TabIndex = 70;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.button2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(250, 390);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(82, 23);
+            this.button2.TabIndex = 76;
+            this.button2.Text = "검색";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // pSearch
+            // 
+            this.pSearch.Location = new System.Drawing.Point(42, 390);
+            this.pSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pSearch.Name = "pSearch";
+            this.pSearch.Size = new System.Drawing.Size(182, 21);
+            this.pSearch.TabIndex = 75;
+            // 
             // empWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1053, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pSearch);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -322,5 +347,7 @@ namespace DBCSProject
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox pSearch;
     }
 }
