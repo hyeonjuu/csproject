@@ -73,9 +73,9 @@ namespace DBCSProject
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.searchBtn.Location = new System.Drawing.Point(601, 324);
+            this.searchBtn.Location = new System.Drawing.Point(617, 324);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(109, 23);
+            this.searchBtn.Size = new System.Drawing.Size(93, 23);
             this.searchBtn.TabIndex = 22;
             this.searchBtn.Text = "검색";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -200,6 +200,7 @@ namespace DBCSProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pType);
