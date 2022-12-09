@@ -12,25 +12,22 @@ namespace DBCSProject
 {
     public partial class empWork : Form
     {
-        public empWork()
+        DBClass dbc = new DBClass();
+        
+        public empWork(string empno,string dept)
         {
             InitializeComponent();
-            
+            dbc.EMPNO = empno;
+            dbc.DEPT = dept;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void empWork_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

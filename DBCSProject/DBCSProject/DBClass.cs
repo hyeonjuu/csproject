@@ -12,7 +12,7 @@ namespace DBCSProject
     class DBClass
     {
         private string empno; // 사원 번호
-        private string admin; //관리자 여부
+        private string dept; //관리자 여부
 
         private int selectedKeyValue;
 
@@ -31,7 +31,7 @@ namespace DBCSProject
         DataTable table;// DataTable 객체입니다.
 
         public String EMPNO { get { return empno; } set { empno = value; } }
-        public String ADMIN { get { return admin; } set { admin = value; } }
+        public String DEPT { get { return dept; } set { dept = value; } }
         public String Ret { get { return ret; } set { ret = value; } }
         public String SQL { get { return sql; } set { sql = value; } }
         public OracleCommand DCom { get { return dcom; } set { dcom = value; } }

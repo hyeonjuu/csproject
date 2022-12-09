@@ -62,7 +62,6 @@ C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\DBCSProje
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\DBCSProject.pdb
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\Oracle.DataAccess.dll
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.csproj.AssemblyReference.cache
-C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.Form1.resources
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.Form2.resources
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.main.resources
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.changeEMPInfo.resources
@@ -73,7 +72,6 @@ C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProje
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.csproj.CopyComplete
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.exe
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.pdb
-C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.empInfoDetail.resources
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.empWork.resources
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.myWork.resources
 C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.organizationChart.resources
@@ -98,3 +96,7 @@ C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\DBCSProject.
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\bin\Debug\DBCSProject.pdb
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.csproj.CopyComplete
 C:\Users\USER\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.EMPDetail.resources
+C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.EMPDetail.resources
+C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.Form1.resources
+C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.Admin.resources
+C:\Users\HyeonJu\Documents\csproject\DBCSProject\DBCSProject\obj\Debug\DBCSProject.Executive.resources

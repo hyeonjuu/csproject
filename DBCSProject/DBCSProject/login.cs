@@ -15,11 +15,16 @@ namespace DBCSProject
     {
         string sqlstr;
         DBClass dbc = new DBClass();
+        DataRow currRow;
         public login()
         {
             InitializeComponent();
             dbc.DB_Open();
             dbc.DB_Access();
+        }
+        public void isAdmin()
+        {
+
         }
         public int Login(string no, string password)
         {
@@ -35,14 +40,27 @@ namespace DBCSProject
                 {
                     return -2;
                 }
-                DataRow currRow = dbc.Table.Rows[0];
+                currRow = dbc.Table.Rows[0];
                 
                 if (currRow["password"].Equals(password))
                 {
-                    dbc.EMPNO = no;
-                    return 1;
+                    if (currRow["rank"].Equals("이사"))
+                    {
+                        dbc.EMPNO = no;
+                        return 3;
+                    }
+                    else if(currRow["rank"].Equals("팀장") || currRow["rank"].Equals("지점장") || currRow["rank"].Equals("부장"))
+                    {
+                        dbc.EMPNO = no;
+                        return 2;
+                    }
+                    else
+                    {
+                        dbc.EMPNO = no;
+                        return 1;
+                    }
                 }
-                else
+                else 
                 {
                     return -1;
                 }
@@ -62,6 +80,20 @@ namespace DBCSProject
                     Form1 form1 = new Form1(id.Text);
                     form1.Owner = this;
                     form1.ShowDialog();
+                    this.Close();
+                    break;
+                case 2:
+                    this.Hide();
+                    Admin admin = new Admin(id.Text,currRow["dept"].ToString());
+                    admin.Owner = this;
+                    admin.ShowDialog();
+                    this.Close();
+                    break;
+                case 3:
+                    this.Hide();
+                    Executive executive = new Executive(id.Text, currRow["dept"].ToString());
+                    executive.Owner = this;
+                    executive.ShowDialog();
                     this.Close();
                     break;
                 case -1:

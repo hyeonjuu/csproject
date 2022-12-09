@@ -242,7 +242,6 @@ namespace DBCSProject
             this.label2.Size = new System.Drawing.Size(157, 15);
             this.label2.TabIndex = 62;
             this.label2.Text = "선택 기간 근무 시간 : ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -253,7 +252,6 @@ namespace DBCSProject
             this.label3.Size = new System.Drawing.Size(25, 15);
             this.label3.TabIndex = 62;
             this.label3.Text = "50";
-            this.label3.Click += new System.EventHandler(this.label2_Click);
             // 
             // label6
             // 

@@ -26,64 +26,84 @@ namespace DBCSProject
             dbc.DB_Access();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            dbc.DS.Clear();
-            dbc.DA.Fill(dbc.DS, "emp");
-            empTable = dbc.DS.Tables["emp"];
 
-            DataRow[] ResultRows = empTable.Select("NAME like '%" + pName.Text + "%'");
-
-            listView1.Items.Clear();
-
-            foreach(DataRow currRow in ResultRows)
-            {
-                listView1.Items.Add(currRow["NAME"].ToString());
-            }
-        }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+                string code = e.Node.Tag.ToString();
 
+            DBClass dbc = new DBClass();
+            dbc.DB_Access();
+            dbc.DB_Open();
+                dbc.DCom.CommandText = "select * from emp where dept = :dept order by no asc";
+                dbc.DCom.Parameters.Add("dept", OracleDbType.Varchar2).Value = code;
+                dbc.DA.SelectCommand = dbc.DCom;
+                dbc.DA.Fill(dbc.DS, "emp");
+                if (dbc.DS.Tables["emp"].Rows.Count <= 0)
+                {
+                    return;
+                }
+                empTable = dbc.DS.Tables["emp"];
+
+                comboBox1.Items.Clear();
+
+                foreach (DataRow currRow in empTable.Rows)
+                {
+                    comboBox1.Items.Add(currRow["NAME"].ToString() + " " + currRow["RANK"].ToString());
+                }
+            
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void button1_Click(object sender, EventArgs e)
         {
             dbc.DS.Clear();
+            dbc.DCom.CommandText = "select * from emp where name like '%"+ pSearch.Text +"%' order by no asc";
+            dbc.DA.SelectCommand = dbc.DCom;
             dbc.DA.Fill(dbc.DS, "emp");
             empTable = dbc.DS.Tables["emp"];
 
-            DataRow[] ResultRows = empTable.Select("NAME like '%" + pSearch.Text + "%'");
+            comboBox1.Items.Clear();
 
-            DataColumn[] PrimaryKey = new DataColumn[1];
-            PrimaryKey[0] = empTable.Columns["NO"];
-            empTable.PrimaryKey = PrimaryKey;
+            foreach (DataRow currRow in empTable.Rows)
+            {
+                comboBox1.Items.Add(currRow["NAME"].ToString() + " " + currRow["RANK"].ToString());
+            }
+        }
 
-            DataRow currRow = empTable.Rows.Find(listView1.Text.Substring(0, 2));
+        private void organizationChart_Load(object sender, EventArgs e)
+        {
+            dbc.DS.Clear();
+            dbc.DCom.CommandText = "select * from emp order by no asc";
+            dbc.DA.SelectCommand = dbc.DCom;
+            dbc.DA.Fill(dbc.DS, "emp");
+            empTable = dbc.DS.Tables["emp"];
+            
 
-            dbc.SelectedKeyValue = Convert.ToInt32(currRow["name"].ToString());
+            comboBox1.Items.Clear();
+
+            foreach (DataRow currRow in empTable.Rows)
+            {
+                comboBox1.Items.Add(currRow["NAME"].ToString() + " " + currRow["RANK"].ToString());
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.SelectedIndex < 0)
+            {
+                return;
+            }
+            int index = comboBox1.SelectedIndex;
+            DataRow currRow = empTable.Rows[index];
+
+
             pName.Text = currRow["name"].ToString();
             pEmail.Text = currRow["email"].ToString();
             pTel.Text = currRow["tel"].ToString();
             pRank.Text = currRow["rank"].ToString();
             pDepartment.Text = currRow["dept"].ToString();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dbc.DS.Clear();
-            dbc.DA.Fill(dbc.DS, "emp");
-            empTable = dbc.DS.Tables["emp"];
-
-            DataRow[] ResultRows = empTable.Select("NAME like '%" + pSearch.Text + "%'");
-
-            listView1.Items.Clear();
-
-            foreach (DataRow currRow in ResultRows)
-            {
-                listView1.Items.Add(currRow["NO"].ToString() + " " + currRow["NAME"].ToString());
-            }
-        }
-        
     }
 }
