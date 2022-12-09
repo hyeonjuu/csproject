@@ -61,50 +61,54 @@ namespace DBCSProject
             // 
             // saveBtn
             // 
-            this.saveBtn.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.saveBtn.Location = new System.Drawing.Point(617, 373);
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.saveBtn.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(617, 385);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(93, 23);
+            this.saveBtn.Size = new System.Drawing.Size(93, 42);
             this.saveBtn.TabIndex = 23;
             this.saveBtn.Text = "저장";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // searchBtn
             // 
-            this.searchBtn.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.searchBtn.Location = new System.Drawing.Point(617, 324);
+            this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.searchBtn.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.searchBtn.ForeColor = System.Drawing.Color.White;
+            this.searchBtn.Location = new System.Drawing.Point(617, 321);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(93, 23);
+            this.searchBtn.Size = new System.Drawing.Size(93, 43);
             this.searchBtn.TabIndex = 22;
             this.searchBtn.Text = "검색";
-            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // pDate
             // 
-            this.pDate.Location = new System.Drawing.Point(434, 406);
+            this.pDate.Location = new System.Drawing.Point(434, 408);
             this.pDate.Name = "pDate";
-            this.pDate.Size = new System.Drawing.Size(125, 21);
+            this.pDate.Size = new System.Drawing.Size(133, 21);
             this.pDate.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(312, 411);
+            this.label7.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(320, 410);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 16);
+            this.label7.Size = new System.Drawing.Size(51, 19);
             this.label7.TabIndex = 5;
             this.label7.Text = "입사일";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(63, 411);
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(63, 410);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(65, 19);
             this.label3.TabIndex = 9;
             this.label3.Text = "고용형태";
             // 
@@ -112,7 +116,7 @@ namespace DBCSProject
             // 
             this.pVacation.Location = new System.Drawing.Point(434, 364);
             this.pVacation.Name = "pVacation";
-            this.pVacation.Size = new System.Drawing.Size(125, 21);
+            this.pVacation.Size = new System.Drawing.Size(133, 21);
             this.pVacation.TabIndex = 17;
             // 
             // pBirth
@@ -125,20 +129,20 @@ namespace DBCSProject
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(312, 369);
+            this.label6.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(320, 366);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 16);
+            this.label6.Size = new System.Drawing.Size(98, 19);
             this.label6.TabIndex = 8;
             this.label6.Text = "연간 연차시간";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(63, 369);
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(63, 366);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 7;
             this.label2.Text = "생년월일";
             // 
@@ -146,16 +150,16 @@ namespace DBCSProject
             // 
             this.pWorking.Location = new System.Drawing.Point(434, 321);
             this.pWorking.Name = "pWorking";
-            this.pWorking.Size = new System.Drawing.Size(125, 21);
+            this.pWorking.Size = new System.Drawing.Size(133, 21);
             this.pWorking.TabIndex = 20;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(312, 325);
+            this.label5.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(320, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 16);
+            this.label5.Size = new System.Drawing.Size(84, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "주 근무시간";
             // 
@@ -170,10 +174,10 @@ namespace DBCSProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(63, 325);
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(63, 321);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.Size = new System.Drawing.Size(37, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "사번";
             // 
@@ -188,11 +192,11 @@ namespace DBCSProject
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("돋움", 30F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 30F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.label4.Location = new System.Drawing.Point(212, 21);
+            this.label4.Location = new System.Drawing.Point(196, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(387, 40);
+            this.label4.Size = new System.Drawing.Size(385, 54);
             this.label4.TabIndex = 29;
             this.label4.Text = "직원 부가 정보 관리";
             // 
