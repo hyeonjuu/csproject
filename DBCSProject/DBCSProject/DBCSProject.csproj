@@ -84,11 +84,11 @@
     <Compile Include="vacation.Designer.cs">
       <DependentUpon>vacation.cs</DependentUpon>
     </Compile>
-    <Compile Include="myWork.cs">
+    <Compile Include="MyWork.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="myWork.Designer.cs">
-      <DependentUpon>myWork.cs</DependentUpon>
+    <Compile Include="MyWork.Designer.cs">
+      <DependentUpon>MyWork.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="myWork.resx">
-      <DependentUpon>myWork.cs</DependentUpon>
+    <EmbeddedResource Include="MyWork.resx">
+      <DependentUpon>MyWork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="organizationChart.resx">
       <DependentUpon>organizationChart.cs</DependentUpon>

@@ -1,7 +1,7 @@
 ﻿
 namespace DBCSProject
 {
-    partial class myWork
+    partial class MyWork
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@ namespace DBCSProject
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.stop = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.start = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.note = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -47,48 +47,53 @@ namespace DBCSProject
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.confirm = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 30F);
+            this.label1.Font = new System.Drawing.Font("돋움", 30F);
             this.label1.Location = new System.Drawing.Point(435, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 50);
             this.label1.TabIndex = 28;
             this.label1.Text = "내 근무 현황";
             // 
-            // textBox4
+            // stop
             // 
-            this.textBox4.Location = new System.Drawing.Point(536, 246);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 25);
-            this.textBox4.TabIndex = 38;
+            this.stop.Font = new System.Drawing.Font("돋움", 9F);
+            this.stop.Location = new System.Drawing.Point(515, 262);
+            this.stop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.stop.Name = "stop";
+            this.stop.Size = new System.Drawing.Size(226, 25);
+            this.stop.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(451, 250);
+            this.label4.Font = new System.Drawing.Font("돋움", 9F);
+            this.label4.Location = new System.Drawing.Point(430, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 35;
             this.label4.Text = "퇴근시간";
             // 
-            // textBox3
+            // start
             // 
-            this.textBox3.Location = new System.Drawing.Point(536, 208);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 25);
-            this.textBox3.TabIndex = 36;
+            this.start.Font = new System.Drawing.Font("돋움", 9F);
+            this.start.Location = new System.Drawing.Point(515, 224);
+            this.start.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(226, 25);
+            this.start.TabIndex = 36;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(451, 211);
+            this.label5.Font = new System.Drawing.Font("돋움", 9F);
+            this.label5.Location = new System.Drawing.Point(430, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 34;
@@ -97,7 +102,8 @@ namespace DBCSProject
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(451, 169);
+            this.label7.Font = new System.Drawing.Font("돋움", 9F);
+            this.label7.Location = new System.Drawing.Point(430, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 33;
@@ -106,48 +112,56 @@ namespace DBCSProject
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(451, 301);
+            this.label8.Font = new System.Drawing.Font("돋움", 9F);
+            this.label8.Location = new System.Drawing.Point(430, 317);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 15);
             this.label8.TabIndex = 35;
             this.label8.Text = "특이사항";
             // 
-            // textBox1
+            // note
             // 
-            this.textBox1.Location = new System.Drawing.Point(536, 298);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 92);
-            this.textBox1.TabIndex = 38;
+            this.note.Font = new System.Drawing.Font("돋움", 9F);
+            this.note.Location = new System.Drawing.Point(515, 314);
+            this.note.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.note.Multiline = true;
+            this.note.Name = "note";
+            this.note.Size = new System.Drawing.Size(226, 92);
+            this.note.TabIndex = 38;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(451, 401);
+            this.label9.Font = new System.Drawing.Font("돋움", 9F);
+            this.label9.Location = new System.Drawing.Point(430, 417);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 15);
+            this.label9.Size = new System.Drawing.Size(72, 15);
             this.label9.TabIndex = 35;
-            this.label9.Text = "승인 여부       승인";
+            this.label9.Text = "승인 여부";
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("돋움", 9F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(536, 161);
+            this.comboBox1.Location = new System.Drawing.Point(515, 177);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(226, 23);
             this.comboBox1.TabIndex = 40;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.Font = new System.Drawing.Font("돋움", 9F);
             this.monthCalendar1.Location = new System.Drawing.Point(73, 188);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 41;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // planLabel
             // 
+            this.planLabel.Font = new System.Drawing.Font("돋움", 9F);
             this.planLabel.Location = new System.Drawing.Point(1015, 222);
             this.planLabel.Name = "planLabel";
             this.planLabel.Size = new System.Drawing.Size(139, 24);
@@ -157,7 +171,7 @@ namespace DBCSProject
             // 
             // WSPlan
             // 
-            this.WSPlan.Font = new System.Drawing.Font("굴림", 15F);
+            this.WSPlan.Font = new System.Drawing.Font("돋움", 15F);
             this.WSPlan.Location = new System.Drawing.Point(1019, 250);
             this.WSPlan.Name = "WSPlan";
             this.WSPlan.Size = new System.Drawing.Size(136, 24);
@@ -167,7 +181,7 @@ namespace DBCSProject
             // 
             // WSCurrent
             // 
-            this.WSCurrent.Font = new System.Drawing.Font("굴림", 15F);
+            this.WSCurrent.Font = new System.Drawing.Font("돋움", 15F);
             this.WSCurrent.Location = new System.Drawing.Point(817, 250);
             this.WSCurrent.Name = "WSCurrent";
             this.WSCurrent.Size = new System.Drawing.Size(152, 24);
@@ -177,6 +191,7 @@ namespace DBCSProject
             // 
             // currentLabel
             // 
+            this.currentLabel.Font = new System.Drawing.Font("돋움", 9F);
             this.currentLabel.Location = new System.Drawing.Point(814, 226);
             this.currentLabel.Name = "currentLabel";
             this.currentLabel.Size = new System.Drawing.Size(155, 24);
@@ -196,6 +211,7 @@ namespace DBCSProject
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Font = new System.Drawing.Font("돋움", 9F);
             this.groupBox1.Location = new System.Drawing.Point(799, 172);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
@@ -214,11 +230,21 @@ namespace DBCSProject
             this.label6.TabIndex = 6;
             this.label6.Text = "이달의 근무";
             // 
-            // myWork
+            // confirm
+            // 
+            this.confirm.AutoSize = true;
+            this.confirm.Font = new System.Drawing.Font("돋움", 9F);
+            this.confirm.Location = new System.Drawing.Point(512, 417);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(37, 15);
+            this.confirm.TabIndex = 35;
+            this.confirm.Text = "승인";
+            // 
+            // MyWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 562);
+            this.ClientSize = new System.Drawing.Size(1202, 553);
             this.Controls.Add(this.planLabel);
             this.Controls.Add(this.WSPlan);
             this.Controls.Add(this.WSCurrent);
@@ -227,18 +253,20 @@ namespace DBCSProject
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.note);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.confirm);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.stop);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.start);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "myWork";
+            this.Name = "MyWork";
             this.Text = "내 근무 현황";
+            this.Load += new System.EventHandler(this.myWork_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -248,13 +276,13 @@ namespace DBCSProject
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox stop;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox start;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox note;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
@@ -265,5 +293,6 @@ namespace DBCSProject
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label confirm;
     }
 }

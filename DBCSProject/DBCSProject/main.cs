@@ -42,9 +42,9 @@ namespace DBCSProject
                 dbc.DCom.CommandText = sqlstr;
                 dbc.DA.SelectCommand = dbc.DCom;
                 dbc.DA.Fill(dbc.DS, "emp");
-                dbc.PhoneTable = dbc.DS.Tables["emp"];
+                dbc.Table = dbc.DS.Tables["emp"];
                 
-                DataRow currRow = dbc.PhoneTable.Rows[0];
+                DataRow currRow = dbc.Table.Rows[0];
 
                 empInfo.Text = currRow["name"] + " : " + currRow["rank"];
             }
@@ -111,13 +111,17 @@ namespace DBCSProject
                 dbc.DA.SelectCommand = dbc.DCom;
                 dbc.DA.Fill(dbc.DS, "workstatus");
 
-                DataRow currRow = dbc.DS.Tables["workstatus"].Rows[0];
+                DataRow currRow; 
+                if(dbc.DS.Tables["workstatus"].Rows.Count > 0)
+                {
+                    currRow = dbc.DS.Tables["workstatus"].Rows[0];
+                    progressBar1.Maximum = Convert.ToInt32(currRow["plantime"]);
+                    progressBar1.Value = Convert.ToInt32(currRow["currenttime"]);
 
-                progressBar1.Maximum = Convert.ToInt32(currRow["plantime"]);
-                progressBar1.Value = Convert.ToInt32(currRow["currenttime"]);
+                    WSCurrent.Text = currRow["currenttime"].ToString() + "h";
+                    WSPlan.Text = currRow["plantime"].ToString() + "h";
+                }
 
-                WSCurrent.Text = currRow["currenttime"].ToString() + "h";
-                WSPlan.Text = currRow["plantime"].ToString()+"h";
                 
                 
             }
@@ -208,7 +212,7 @@ namespace DBCSProject
                 string today = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Day.ToString();
                 if (todayStatus == null) { 
 
-                sqlstr = "insert into attendance(empno,atnddate,atndtype,starttime,note) values('"+dbc.EMPNO + "',to_char(sysdate,'yy/mm/dd'),'출근',to_char(systimestamp,'hh:mi:ss'),'"+note.Text+"')";
+                sqlstr = "insert into attendance(empno,atnddate,atndtype,starttime,note,confirm) values('"+dbc.EMPNO + "',to_char(sysdate,'yy/mm/dd'),'출근',to_char(systimestamp,'hh:mi:ss'),'"+note.Text+"','미승인')";
                     dbc.DCom.CommandText = sqlstr;
                     dbc.DCom.ExecuteNonQuery();
                     todayStatus = "근무 중";

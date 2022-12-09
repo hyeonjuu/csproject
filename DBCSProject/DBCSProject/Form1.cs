@@ -16,7 +16,7 @@ namespace DBCSProject
         organizationChart organizationChart;
         changeEMPInfo changeEmpInfo;
         empWork empWork;
-        myWork myWork;
+        MyWork myWork;
         vacation vacation;
 
         private string empno;
@@ -31,9 +31,12 @@ namespace DBCSProject
             this.empno = empno;
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
             main = new main(empno);
+            this.Width = 940;
+            this.Height = 670;
             main.MdiParent = this;
             main.WindowState = FormWindowState.Maximized;
             main.Show();
@@ -50,10 +53,13 @@ namespace DBCSProject
         {
             if (vacation == null || vacation.IsDisposed)
             {
-                vacation = new vacation();
+                this.Width = 1220;
+                this.Height = 600;
+                vacation = new vacation(empno);
                 vacation.MdiParent = this;
                 vacation.WindowState = FormWindowState.Maximized;
                 vacation.Show();
+                
             }
             else
             {
@@ -65,7 +71,9 @@ namespace DBCSProject
         {
             if (myWork == null || myWork.IsDisposed)
             {
-                myWork = new myWork();
+                this.Width = 1220;
+                this.Height = 600;
+                myWork = new MyWork(empno);
                 myWork.MdiParent = this;
                 myWork.WindowState = FormWindowState.Maximized;
                 myWork.Show();
@@ -84,6 +92,8 @@ namespace DBCSProject
                 empWork.MdiParent = this;
                 empWork.WindowState = FormWindowState.Maximized;
                 empWork.Show();
+                
+
             }
             else
             {

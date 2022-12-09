@@ -30,12 +30,12 @@ namespace DBCSProject
                 dbc.DCom.CommandText = sqlstr;
                 dbc.DA.SelectCommand = dbc.DCom;
                 dbc.DA.Fill(dbc.DS, "user");
-                dbc.PhoneTable = dbc.DS.Tables["user"];
-                if (dbc.PhoneTable.Rows.Count == 0)
+                dbc.Table = dbc.DS.Tables["user"];
+                if (dbc.Table.Rows.Count == 0)
                 {
                     return -2;
                 }
-                DataRow currRow = dbc.PhoneTable.Rows[0];
+                DataRow currRow = dbc.Table.Rows[0];
                 
                 if (currRow["password"].Equals(password))
                 {

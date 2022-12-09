@@ -26,7 +26,7 @@ namespace DBCSProject
         DataSet ds;// DataSet 객체입니다.
         OracleDataReader dr; //DataReader 객체입니다.
         OracleCommandBuilder myCommandBuilder; // 추가, 수정, 삭제시에 필요한 명령문을 자동으로 작성해주는 객체입니다.
-        DataTable phoneTable;// DataTable 객체입니다.
+        DataTable table;// DataTable 객체입니다.
 
         public String EMPNO { get { return empno; } set { empno = value; } }
         public String ADMIN { get { return admin; } set { admin = value; } }
@@ -43,7 +43,7 @@ namespace DBCSProject
         public DataSet DS { get { return ds; } set { ds = value; } }
         public OracleDataReader DR { get { return dr; } set { dr = value; } }
         public OracleCommandBuilder MyCommandBuilder { get { return myCommandBuilder; } set { myCommandBuilder = value; } }
-        public DataTable PhoneTable { get { return phoneTable; } set { phoneTable = value; } }
+        public DataTable Table { get { return table; } set { table = value; } }
 
         public void DB_Open()
         {
@@ -82,7 +82,7 @@ namespace DBCSProject
         }
         public void DB_ObjCreate()
         {
-            PhoneTable = new DataTable();
+            Table = new DataTable();
 
         }
 
