@@ -29,6 +29,7 @@ namespace DBCSProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pNo = new System.Windows.Forms.TextBox();
@@ -49,13 +50,19 @@ namespace DBCSProject
             this.searchBtn = new System.Windows.Forms.Button();
             this.empdetailBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.직원검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.직원추가ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.직원정보수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(50, 92);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
@@ -247,6 +254,36 @@ namespace DBCSProject
             this.label9.TabIndex = 29;
             this.label9.Text = "직원 정보 관리";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.직원검색ToolStripMenuItem,
+            this.직원추가ToolStripMenuItem,
+            this.직원정보수정ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 70);
+            // 
+            // 직원검색ToolStripMenuItem
+            // 
+            this.직원검색ToolStripMenuItem.Name = "직원검색ToolStripMenuItem";
+            this.직원검색ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.직원검색ToolStripMenuItem.Text = "직원 검색";
+            this.직원검색ToolStripMenuItem.Click += new System.EventHandler(this.직원검색ToolStripMenuItem_Click);
+            // 
+            // 직원추가ToolStripMenuItem
+            // 
+            this.직원추가ToolStripMenuItem.Name = "직원추가ToolStripMenuItem";
+            this.직원추가ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.직원추가ToolStripMenuItem.Text = "직원 추가";
+            this.직원추가ToolStripMenuItem.Click += new System.EventHandler(this.직원추가ToolStripMenuItem_Click);
+            // 
+            // 직원정보수정ToolStripMenuItem
+            // 
+            this.직원정보수정ToolStripMenuItem.Name = "직원정보수정ToolStripMenuItem";
+            this.직원정보수정ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.직원정보수정ToolStripMenuItem.Text = "직원 정보 수정";
+            this.직원정보수정ToolStripMenuItem.Click += new System.EventHandler(this.직원정보수정ToolStripMenuItem_Click);
+            // 
             // changeEMPInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -277,6 +314,7 @@ namespace DBCSProject
             this.Text = "직원 정보 관리";
             this.Load += new System.EventHandler(this.changeEMPInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +341,9 @@ namespace DBCSProject
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button empdetailBtn;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 직원검색ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 직원추가ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 직원정보수정ToolStripMenuItem;
     }
 }

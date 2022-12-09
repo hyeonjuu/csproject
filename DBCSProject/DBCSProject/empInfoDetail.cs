@@ -170,5 +170,23 @@ namespace DBCSProject
                 MessageBox.Show(DE.Message);
             }
         }
+
+        private void 직원검색ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dbc.DS.Clear();
+            dbc.DA.Fill(dbc.DS, "additional");
+            detailTable = dbc.DS.Tables["additional"];
+
+            DataRow[] ResultRows = detailTable.Select("NO like '%" + pNo.Text + "%'");
+
+            foreach (DataRow currRow in ResultRows)
+            {
+                pBirth.Text = currRow["BIRTH"].ToString();
+                pType.Text = currRow["TYPE"].ToString();
+                pWorking.Text = currRow["WORKINGHOUR"].ToString();
+                pVacation.Text = currRow["VACATIONHOUR"].ToString();
+                pDate.Text = currRow["ENTRY"].ToString();
+            }
+        }
     }
 }
