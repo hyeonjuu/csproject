@@ -27,5 +27,10 @@ namespace DBCSProject
         {
 
         }
+
+        private void empWork_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

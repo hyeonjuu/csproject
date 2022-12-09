@@ -111,13 +111,17 @@ namespace DBCSProject
                 dbc.DA.SelectCommand = dbc.DCom;
                 dbc.DA.Fill(dbc.DS, "workstatus");
 
-                DataRow currRow = dbc.DS.Tables["workstatus"].Rows[0];
+                DataRow currRow; 
+                if(dbc.DS.Tables["workstatus"].Rows.Count > 0)
+                {
+                    currRow = dbc.DS.Tables["workstatus"].Rows[0];
+                    progressBar1.Maximum = Convert.ToInt32(currRow["plantime"]);
+                    progressBar1.Value = Convert.ToInt32(currRow["currenttime"]);
 
-                progressBar1.Maximum = Convert.ToInt32(currRow["plantime"]);
-                progressBar1.Value = Convert.ToInt32(currRow["currenttime"]);
+                    WSCurrent.Text = currRow["currenttime"].ToString() + "h";
+                    WSPlan.Text = currRow["plantime"].ToString() + "h";
+                }
 
-                WSCurrent.Text = currRow["currenttime"].ToString() + "h";
-                WSPlan.Text = currRow["plantime"].ToString()+"h";
                 
                 
             }
