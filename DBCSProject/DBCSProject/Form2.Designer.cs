@@ -43,7 +43,7 @@ namespace DBCSProject
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("돋움", 9F);
-            this.label2.Location = new System.Drawing.Point(638, 126);
+            this.label2.Location = new System.Drawing.Point(649, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 12);
             this.label2.TabIndex = 80;
@@ -52,7 +52,7 @@ namespace DBCSProject
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("돋움", 9F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(350, 126);
+            this.dateTimePicker2.Location = new System.Drawing.Point(363, 104);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(220, 21);
             this.dateTimePicker2.TabIndex = 76;
@@ -60,7 +60,7 @@ namespace DBCSProject
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("돋움", 9F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(350, 199);
+            this.dateTimePicker1.Location = new System.Drawing.Point(363, 155);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(220, 21);
             this.dateTimePicker1.TabIndex = 77;
@@ -73,10 +73,10 @@ namespace DBCSProject
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(33, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 104);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(238, 192);
+            this.dataGridView1.Size = new System.Drawing.Size(296, 237);
             this.dataGridView1.TabIndex = 81;
             // 
             // Column1
@@ -101,6 +101,7 @@ namespace DBCSProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(838, 364);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
