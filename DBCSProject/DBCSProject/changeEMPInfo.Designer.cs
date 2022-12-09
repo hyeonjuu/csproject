@@ -243,7 +243,7 @@ namespace DBCSProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(841, 530);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.empdetailBtn);
