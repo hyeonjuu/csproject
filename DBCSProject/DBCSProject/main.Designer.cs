@@ -52,20 +52,22 @@ namespace DBCSProject
             // today
             // 
             this.today.Font = new System.Drawing.Font("돋움", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.today.Location = new System.Drawing.Point(29, 135);
+            this.today.Location = new System.Drawing.Point(33, 169);
             this.today.Name = "today";
-            this.today.Size = new System.Drawing.Size(342, 76);
+            this.today.Size = new System.Drawing.Size(391, 95);
             this.today.TabIndex = 1;
             this.today.Text = "2022년 11월 1일";
             this.today.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.button1.Font = new System.Drawing.Font("돋움", 30F);
-            this.button1.Location = new System.Drawing.Point(50, 357);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(57, 446);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(321, 63);
+            this.button1.Size = new System.Drawing.Size(367, 79);
             this.button1.TabIndex = 2;
             this.button1.Text = "출근";
             this.button1.UseVisualStyleBackColor = false;
@@ -74,37 +76,39 @@ namespace DBCSProject
             // note
             // 
             this.note.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.note.Location = new System.Drawing.Point(50, 295);
+            this.note.Location = new System.Drawing.Point(57, 369);
+            this.note.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.note.Multiline = true;
             this.note.Name = "note";
-            this.note.Size = new System.Drawing.Size(320, 45);
+            this.note.Size = new System.Drawing.Size(365, 55);
             this.note.TabIndex = 3;
             this.note.Text = "특이사항";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(447, 187);
+            this.progressBar1.Location = new System.Drawing.Point(511, 234);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.progressBar1.Maximum = 160;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(276, 23);
+            this.progressBar1.Size = new System.Drawing.Size(315, 29);
             this.progressBar1.TabIndex = 4;
             this.progressBar1.Value = 30;
             // 
             // currentLabel
             // 
             this.currentLabel.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.currentLabel.Location = new System.Drawing.Point(434, 128);
+            this.currentLabel.Location = new System.Drawing.Point(496, 160);
             this.currentLabel.Name = "currentLabel";
-            this.currentLabel.Size = new System.Drawing.Size(136, 19);
+            this.currentLabel.Size = new System.Drawing.Size(155, 24);
             this.currentLabel.TabIndex = 5;
             this.currentLabel.Text = "이달의 현재 근무시간\r\n";
             // 
             // planLabel
             // 
             this.planLabel.Font = new System.Drawing.Font("돋움", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.planLabel.Location = new System.Drawing.Point(610, 125);
+            this.planLabel.Location = new System.Drawing.Point(697, 156);
             this.planLabel.Name = "planLabel";
-            this.planLabel.Size = new System.Drawing.Size(122, 19);
+            this.planLabel.Size = new System.Drawing.Size(139, 24);
             this.planLabel.TabIndex = 5;
             this.planLabel.Text = "이달의 총 근무시간\r\n";
             this.planLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -113,9 +117,9 @@ namespace DBCSProject
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("돋움", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(530, 248);
+            this.label4.Location = new System.Drawing.Point(606, 310);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.Size = new System.Drawing.Size(160, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "내 휴가 통계";
             // 
@@ -124,19 +128,20 @@ namespace DBCSProject
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Location = new System.Drawing.Point(420, 280);
+            this.dataGridView1.Location = new System.Drawing.Point(480, 350);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(393, 189);
             this.dataGridView1.TabIndex = 8;
             // 
             // empInfo
             // 
             this.empInfo.Font = new System.Drawing.Font("돋움", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empInfo.Location = new System.Drawing.Point(43, 67);
+            this.empInfo.Location = new System.Drawing.Point(49, 84);
             this.empInfo.Name = "empInfo";
-            this.empInfo.Size = new System.Drawing.Size(328, 48);
+            this.empInfo.Size = new System.Drawing.Size(375, 60);
             this.empInfo.TabIndex = 1;
             this.empInfo.Text = "사원 : 조현주";
             this.empInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -145,18 +150,18 @@ namespace DBCSProject
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("돋움", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(109, 0);
+            this.label6.Location = new System.Drawing.Point(125, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 20);
+            this.label6.Size = new System.Drawing.Size(151, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "이달의 근무";
             // 
             // status
             // 
             this.status.Font = new System.Drawing.Font("돋움", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.status.Location = new System.Drawing.Point(43, 225);
+            this.status.Location = new System.Drawing.Point(49, 281);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(328, 57);
+            this.status.Size = new System.Drawing.Size(375, 71);
             this.status.TabIndex = 1;
             this.status.Text = "출근 전";
             this.status.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -168,9 +173,9 @@ namespace DBCSProject
             // WSCurrent
             // 
             this.WSCurrent.Font = new System.Drawing.Font("돋움", 15F);
-            this.WSCurrent.Location = new System.Drawing.Point(437, 147);
+            this.WSCurrent.Location = new System.Drawing.Point(499, 184);
             this.WSCurrent.Name = "WSCurrent";
-            this.WSCurrent.Size = new System.Drawing.Size(133, 19);
+            this.WSCurrent.Size = new System.Drawing.Size(152, 24);
             this.WSCurrent.TabIndex = 5;
             this.WSCurrent.Text = "0h";
             this.WSCurrent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -178,9 +183,9 @@ namespace DBCSProject
             // WSPlan
             // 
             this.WSPlan.Font = new System.Drawing.Font("돋움", 15F);
-            this.WSPlan.Location = new System.Drawing.Point(613, 147);
+            this.WSPlan.Location = new System.Drawing.Point(701, 184);
             this.WSPlan.Name = "WSPlan";
-            this.WSPlan.Size = new System.Drawing.Size(119, 19);
+            this.WSPlan.Size = new System.Drawing.Size(136, 24);
             this.WSPlan.TabIndex = 5;
             this.WSPlan.Text = "0h";
             this.WSPlan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -188,18 +193,20 @@ namespace DBCSProject
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(421, 85);
+            this.groupBox1.Location = new System.Drawing.Point(481, 106);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 155);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(393, 194);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(807, 498);
+            this.ClientSize = new System.Drawing.Size(922, 622);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.planLabel);
@@ -213,6 +220,7 @@ namespace DBCSProject
             this.Controls.Add(this.status);
             this.Controls.Add(this.today);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "main";
             this.Text = "출퇴근하기";
             this.Load += new System.EventHandler(this.main_Load);

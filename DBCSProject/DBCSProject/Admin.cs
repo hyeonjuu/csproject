@@ -90,6 +90,8 @@ namespace DBCSProject
         {
             if (empWork == null || empWork.IsDisposed)
             {
+                this.Width = 1220;
+                this.Height = 600;
                 empWork = new empWork(empno,dept);
                 empWork.MdiParent = this;
                 empWork.WindowState = FormWindowState.Maximized;

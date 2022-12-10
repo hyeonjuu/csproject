@@ -212,7 +212,7 @@ namespace DBCSProject
                 string today = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Day.ToString();
                 if (todayStatus == null) { 
 
-                sqlstr = "insert into attendance(empno,atnddate,atndtype,starttime,note,confirm) values('"+dbc.EMPNO + "',to_char(sysdate,'yy/mm/dd'),'출근',to_char(systimestamp,'hh:mi:ss'),'"+note.Text+"','미승인')";
+                sqlstr = "insert into attendance(empno,atnddate,atndtype,starttime,note,confirm) values('"+dbc.EMPNO + "',to_char(sysdate,'yy/mm/dd'),'출근',to_char(systimestamp,'hh24:mi:ss'),'"+note.Text+"','미승인')";
                     dbc.DCom.CommandText = sqlstr;
                     dbc.DCom.ExecuteNonQuery();
                     todayStatus = "근무 중";
@@ -221,11 +221,12 @@ namespace DBCSProject
                 }
                 else
                 {
-                    sqlstr = "update attendance set atndtype = :atndtype , stoptime = to_char(systimestamp,'hh:mi:ss')  where empno = :empno and atnddate = to_char(sysdate,'yy/mm/dd')";
+                    sqlstr = "update attendance set atndtype = :atndtype , stoptime = to_char(systimestamp,'hh24:mi:ss') , note = :note  where empno = :empno and atnddate = to_char(sysdate,'yy/mm/dd')";
                     
                     dbc.DCom.CommandText = sqlstr;
                     dbc.DCom.Parameters.Clear();
                     dbc.DCom.Parameters.Add("stndtype", OracleDbType.Varchar2).Value = "퇴근";
+                    dbc.DCom.Parameters.Add("note", OracleDbType.Varchar2).Value = note.Text;
                     dbc.DCom.Parameters.Add("empno", OracleDbType.Varchar2).Value = dbc.EMPNO;
                     dbc.DCom.ExecuteNonQuery();
                     button1.Enabled = false;
