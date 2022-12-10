@@ -17,6 +17,7 @@ namespace DBCSProject
         string sqlstr;
         DBClass dbc = new DBClass();
         DataTable empTable;
+        string selectEmp;
 
         EMPDetail EMPDetail;
 
@@ -30,9 +31,6 @@ namespace DBCSProject
             dbc.EMPNO = empno;
         }
 
-        public changeEMPInfo()
-        {
-        }
 
         public void emp_header()
         {
@@ -70,6 +68,7 @@ namespace DBCSProject
                 }
                 DataRow currRow = empTable.Rows[e.RowIndex];
                 pNo.Text = currRow["NO"].ToString();
+                selectEmp = currRow["NO"].ToString();
                 pName.Text = currRow["NAME"].ToString();
                 pRank.Text = currRow["RANK"].ToString();
                 pDepartment.Text = currRow["DEPT"].ToString();
@@ -77,7 +76,7 @@ namespace DBCSProject
                 pEmail.Text = currRow["EMAIL"].ToString();
                 pStatus.Text = currRow["STATUS"].ToString();
 
-                SelectedRowIndex = Convert.ToInt32(currRow["NO"]);
+                //SelectedRowIndex = Convert.ToInt32(currRow["NO"]);
             }
             catch (DataException DE)
             {
@@ -91,15 +90,6 @@ namespace DBCSProject
 
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
@@ -234,105 +224,36 @@ namespace DBCSProject
    
         }
 
-        private void 조직도ToolStripMenuItem_Click(object sender, EventArgs e)
-        { 
-        }
-
-        private void 직원검색ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dbc.DS.Clear();
-            dbc.DA.Fill(dbc.DS, "emp");
-            empTable = dbc.DS.Tables["emp"];
-
-            DataRow[] ResultRows = empTable.Select("NO like '%" + pNo.Text + "%'");
-
-            foreach (DataRow currRow in ResultRows)
-            {
-                pName.Text = currRow["NAME"].ToString();
-                pRank.Text = currRow["RANK"].ToString();
-                pDepartment.Text = currRow["DEPT"].ToString();
-                pTel.Text = currRow["TEL"].ToString();
-                pEmail.Text = currRow["EMAIL"].ToString();
-                pStatus.Text = currRow["STATUS"].ToString();
-            }
-        }
+        
 
         private void 직원추가ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                dbc.DS.Clear();
-                dbc.DA.Fill(dbc.DS, "emp");
+            string command = "추가";
+            menuStrip menustrip = new menuStrip(command);
+            menustrip.ShowDialog();
+            menustrip.Dispose();
 
-                DataTable empTable = dbc.DS.Tables["emp"];
-                DataRow newRow = empTable.NewRow();
-                newRow["NO"] = Convert.ToInt32(pNo.Text);
-                newRow["NAME"] = pName.Text;
-                newRow["RANK"] = pRank.Text;
-                newRow["DEPT"] = pDepartment.Text;
-                newRow["TEL"] = pTel.Text;
-                newRow["EMAIL"] = pEmail.Text;
-                newRow["STATUS"] = pStatus.Text;
+            dbc.DS.Clear();
+            dbc.DA.Fill(dbc.DS, "emp");
+            empTable = dbc.DS.Tables["emp"];
+            dataGridView1.DataSource = empTable;
 
-                empTable.Rows.Add(newRow);
-                dbc.DA.Update(dbc.DS, "emp");
-                dataGridView1.DataSource = dbc.DS.Tables["emp"].DefaultView;
-            }
-            catch (DataException DE)
-            {
-                MessageBox.Show(DE.Message);
-            }
-            catch (Exception DE)
-            {
-                MessageBox.Show(DE.Message);
-            }
+            
         }
 
         private void 직원정보수정ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                dbc.DS.Clear();
-                dbc.DA.Fill(dbc.DS, "emp");
+            string command = "수정";
+            selectEmp = dataGridView1.SelectedCells[0].Value.ToString();
+            menuStrip menustrip = new menuStrip(selectEmp, command);
+            menustrip.ShowDialog();
+            menustrip.Dispose();
 
-                empTable = dbc.DS.Tables["emp"];
-                DataColumn[] PrimaryKey = new DataColumn[1];
-                PrimaryKey[0] = empTable.Columns["NO"];
-                empTable.PrimaryKey = PrimaryKey;
-
-                DataRow currRow = empTable.Rows.Find(SelectedRowIndex);
-
-                currRow.BeginEdit();
-                currRow["NO"] = pNo.Text;
-                currRow["NAME"] = pName.Text;
-                currRow["RANK"] = pRank.Text;
-                currRow["DEPT"] = pDepartment.Text;
-                currRow["TEL"] = pTel.Text;
-                currRow["EMAIL"] = pEmail.Text;
-                currRow["STATUS"] = pStatus.Text;
-                currRow.EndEdit();
-
-                DataSet UpdatedSet = dbc.DS.GetChanges(DataRowState.Modified);
-
-                if (UpdatedSet.HasErrors)
-                {
-                    MessageBox.Show("변경된 데이터에 문제가 있습니다.");
-                }
-                else
-                {
-                    dbc.DA.Update(UpdatedSet, "emp");
-                    dbc.DS.AcceptChanges();
-                }
-                dataGridView1.DataSource = dbc.DS.Tables["emp"].DefaultView;
-            }
-            catch (DataException DE)
-            {
-                MessageBox.Show(DE.Message);
-            }
-            catch (Exception DE)
-            {
-                MessageBox.Show(DE.Message);
-            }
+            dbc.DS.Clear();
+            dbc.DA.Fill(dbc.DS, "emp");
+            empTable = dbc.DS.Tables["emp"];
+            dataGridView1.DataSource = empTable;
+            
         }
     }
 }
