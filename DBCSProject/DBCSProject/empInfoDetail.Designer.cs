@@ -29,6 +29,7 @@ namespace DBCSProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.saveBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
@@ -45,7 +46,10 @@ namespace DBCSProject
             this.label1 = new System.Windows.Forms.Label();
             this.pType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.직원검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -214,6 +218,20 @@ namespace DBCSProject
             this.label4.TabIndex = 29;
             this.label4.Text = "직원 부가 정보 관리";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.직원검색ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // 직원검색ToolStripMenuItem
+            // 
+            this.직원검색ToolStripMenuItem.Name = "직원검색ToolStripMenuItem";
+            this.직원검색ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.직원검색ToolStripMenuItem.Text = "직원 검색";
+            this.직원검색ToolStripMenuItem.Click += new System.EventHandler(this.직원검색ToolStripMenuItem_Click);
+            // 
             // EMPDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -241,6 +259,7 @@ namespace DBCSProject
             this.Text = "직원 부가 정보 관리";
             this.Load += new System.EventHandler(this.EMPDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +283,7 @@ namespace DBCSProject
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox pType;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 직원검색ToolStripMenuItem;
     }
 }
