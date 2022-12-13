@@ -29,29 +29,29 @@ namespace DBCSProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("이사회");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("인천 지점");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("부천 지점");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("서울 지점");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("영업부", new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("경리팀");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("지원팀");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("경영지원부", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("시스템팀");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("모바일팀");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("개발부", new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("회사", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode5,
-            treeNode8,
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("이사회");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("인천 지점");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("부천 지점");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("서울 지점");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("영업부", new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode15,
+            treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("경리팀");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("지원팀");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("경영지원부", new System.Windows.Forms.TreeNode[] {
+            treeNode18,
+            treeNode19});
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("시스템팀");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("모바일팀");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("개발부", new System.Windows.Forms.TreeNode[] {
+            treeNode21,
+            treeNode22});
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("회사", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode17,
+            treeNode20,
+            treeNode23});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.pDepartment = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,45 +75,45 @@ namespace DBCSProject
             this.treeView1.Location = new System.Drawing.Point(32, 65);
             this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "노드15";
-            treeNode1.Tag = "ES000";
-            treeNode1.Text = "이사회";
-            treeNode2.ImageIndex = -2;
-            treeNode2.Name = "노드3";
-            treeNode2.Tag = "MK010";
-            treeNode2.Text = "인천 지점";
-            treeNode3.Name = "노드4";
-            treeNode3.Tag = "MK011";
-            treeNode3.Text = "부천 지점";
-            treeNode4.Name = "노드5";
-            treeNode4.Tag = "MK012";
-            treeNode4.Text = "서울 지점";
-            treeNode5.Name = "노드2";
-            treeNode5.Tag = "MK000";
-            treeNode5.Text = "영업부";
-            treeNode6.Name = "노드7";
-            treeNode6.Tag = "BS010";
-            treeNode6.Text = "경리팀";
-            treeNode7.Name = "노드8";
-            treeNode7.Tag = "BS011";
-            treeNode7.Text = "지원팀";
-            treeNode8.Name = "노드6";
-            treeNode8.Tag = "BS000";
-            treeNode8.Text = "경영지원부";
-            treeNode9.Name = "노드5";
-            treeNode9.Tag = "DEV010";
-            treeNode9.Text = "시스템팀";
-            treeNode10.Name = "노드6";
-            treeNode10.Tag = "DEV011";
-            treeNode10.Text = "모바일팀";
-            treeNode11.Name = "노드14";
-            treeNode11.Tag = "DEV000";
-            treeNode11.Text = "개발부";
-            treeNode12.Name = "노드0";
-            treeNode12.Tag = "개발혁동조합";
-            treeNode12.Text = "회사";
+            treeNode13.Name = "노드15";
+            treeNode13.Tag = "ES000";
+            treeNode13.Text = "이사회";
+            treeNode14.ImageIndex = -2;
+            treeNode14.Name = "노드3";
+            treeNode14.Tag = "MK010";
+            treeNode14.Text = "인천 지점";
+            treeNode15.Name = "노드4";
+            treeNode15.Tag = "MK011";
+            treeNode15.Text = "부천 지점";
+            treeNode16.Name = "노드5";
+            treeNode16.Tag = "MK012";
+            treeNode16.Text = "서울 지점";
+            treeNode17.Name = "노드2";
+            treeNode17.Tag = "MK000";
+            treeNode17.Text = "영업부";
+            treeNode18.Name = "노드7";
+            treeNode18.Tag = "BS010";
+            treeNode18.Text = "경리팀";
+            treeNode19.Name = "노드8";
+            treeNode19.Tag = "BS011";
+            treeNode19.Text = "지원팀";
+            treeNode20.Name = "노드6";
+            treeNode20.Tag = "BS000";
+            treeNode20.Text = "경영지원부";
+            treeNode21.Name = "노드5";
+            treeNode21.Tag = "DEV010";
+            treeNode21.Text = "시스템팀";
+            treeNode22.Name = "노드6";
+            treeNode22.Tag = "DEV011";
+            treeNode22.Text = "모바일팀";
+            treeNode23.Name = "노드14";
+            treeNode23.Tag = "DEV000";
+            treeNode23.Text = "개발부";
+            treeNode24.Name = "노드0";
+            treeNode24.Tag = "개발혁동조합";
+            treeNode24.Text = "회사";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode12});
+            treeNode24});
             this.treeView1.Size = new System.Drawing.Size(354, 246);
             this.treeView1.TabIndex = 1;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);

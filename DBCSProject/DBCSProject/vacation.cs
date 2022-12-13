@@ -17,7 +17,7 @@ namespace DBCSProject
         string startTime;
         string stopTime;
         bool dateAvailable = false;
-
+        bool hasAnnual = true;
 
         DBClass dbc = new DBClass();
 
@@ -56,6 +56,13 @@ namespace DBCSProject
                 dbc.DA.SelectCommand = dbc.DCom;
 
                 dbc.DA.Fill(dbc.DS, "annual");
+
+                foreach(DataRow currRow in dbc.DS.Tables["annual"].Rows)
+                {
+                    if (Convert.ToInt32(currRow["leftover"]) < 4){
+                        hasAnnual = false;
+                    }
+                }
 
                 dataGridView1.DataSource = dbc.DS.Tables["annual"].DefaultView;
                 annual_header();
@@ -105,6 +112,11 @@ namespace DBCSProject
         {
             try
             {
+                if(hasAnnual == false)
+                {
+                    MessageBox.Show("잔여 휴가가 없습니다.");
+                    return;
+                }
                 if (dateAvailable == false)
                 {
                     MessageBox.Show("해당 날짜엔 신청할 수 없습니다.");

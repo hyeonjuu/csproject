@@ -97,10 +97,11 @@ namespace DBCSProject
             dbc.DA.Fill(dbc.DS, "emp");
             empTable = dbc.DS.Tables["emp"];
 
-            DataRow[] ResultRows = empTable.Select("NO like '%" + pNo.Text + "%'");
+            DataRow[] ResultRows = empTable.Select("name like '%" + pName.Text + "%'");
 
             foreach (DataRow currRow in ResultRows)
             {
+                pNo.Text = currRow["no"].ToString();
                 pName.Text = currRow["NAME"].ToString();
                 pRank.Text = currRow["RANK"].ToString();
                 pDepartment.Text = currRow["DEPT"].ToString();

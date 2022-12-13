@@ -105,24 +105,5 @@ namespace DBCSProject
             }
         }
 
-        private void 직원휴가승인ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 직원정보수정ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if(changeEmpInfo == null || changeEmpInfo.IsDisposed)
-            {
-                changeEmpInfo = new changeEMPInfo(empno);
-                changeEmpInfo.MdiParent = this;
-                changeEmpInfo.WindowState = FormWindowState.Maximized;
-                changeEmpInfo.Show();
-            }
-            else
-            {
-                changeEmpInfo.Activate();
-            }
-        }
     }
 }

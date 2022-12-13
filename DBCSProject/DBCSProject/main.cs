@@ -98,7 +98,13 @@ namespace DBCSProject
             }
 
         }
-
+        private void createWork()
+        {
+            string thisMonth = DateTime.Today.Year.ToString() + "/" + DateTime.Today.Month.ToString();
+            sqlstr = "insert into workstatus values('" + dbc.EMPNO + "','" + thisMonth + "','196','0')";
+            dbc.DCom.CommandText = sqlstr;
+            dbc.DCom.ExecuteNonQuery();
+        }
         public void thisMonthWork()
         {
             try
@@ -142,6 +148,12 @@ namespace DBCSProject
             dataGridView1.Columns[3].Width = 120;
             dataGridView1.Columns[4].Width = 120;
         }
+        private void createAnnual() {
+            string thisYear = DateTime.Now.Year.ToString();
+            sqlstr = "insert into annualstatus values('" + dbc.EMPNO + "','" + thisYear + "','연차','96','96')";
+            dbc.DCom.CommandText = sqlstr;
+            dbc.DCom.ExecuteNonQuery();
+        }
 
         public void myAnnual()
         {
@@ -155,7 +167,17 @@ namespace DBCSProject
 
                 dbc.DA.Fill(dbc.DS, "annual");
 
-               
+               if(dbc.DS.Tables["annual"].Rows.Count <= 0)
+                {
+                    createAnnual();
+
+                    thisYear = DateTime.Now.Year.ToString();
+                    sqlstr = "Select year,type,total,total-leftover,leftover from annualstatus where empno = '" + dbc.EMPNO + "'and year = '" + thisYear + "'";
+                    dbc.DCom.CommandText = sqlstr;
+                    dbc.DA.SelectCommand = dbc.DCom;
+
+                    dbc.DA.Fill(dbc.DS, "annual");
+                }
 
                 dataGridView1.DataSource = dbc.DS.Tables["annual"].DefaultView;
                 annual_header();

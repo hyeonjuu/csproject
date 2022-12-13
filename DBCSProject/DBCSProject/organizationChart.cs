@@ -35,7 +35,7 @@ namespace DBCSProject
             DBClass dbc = new DBClass();
             dbc.DB_Access();
             dbc.DB_Open();
-                dbc.DCom.CommandText = "select * from emp where dept = :dept order by no asc";
+                dbc.DCom.CommandText = "select e.name,e.rank,d.name ,e.tel,e.email from emp e , dept d where e.dept = :dept and e.dept = d.code order by e.no asc";
                 dbc.DCom.Parameters.Add("dept", OracleDbType.Varchar2).Value = code;
                 dbc.DA.SelectCommand = dbc.DCom;
                 dbc.DA.Fill(dbc.DS, "emp");
@@ -59,11 +59,10 @@ namespace DBCSProject
         private void button1_Click(object sender, EventArgs e)
         {
             dbc.DS.Clear();
-            dbc.DCom.CommandText = "select * from emp where name like '%"+ pSearch.Text +"%' order by no asc";
+            dbc.DCom.CommandText = "select e.name,e.rank,d.name ,e.tel,e.email from emp e, dept d where e.name like '%" + pSearch.Text + "%' and e.dept = d.code order by e.no asc";
             dbc.DA.SelectCommand = dbc.DCom;
             dbc.DA.Fill(dbc.DS, "emp");
             empTable = dbc.DS.Tables["emp"];
-
             comboBox1.Items.Clear();
 
             foreach (DataRow currRow in empTable.Rows)
@@ -75,7 +74,7 @@ namespace DBCSProject
         private void organizationChart_Load(object sender, EventArgs e)
         {
             dbc.DS.Clear();
-            dbc.DCom.CommandText = "select * from emp order by no asc";
+            dbc.DCom.CommandText = "select e.name,e.rank,d.name ,e.tel,e.email from emp e , dept d where e.dept = d.code order by e.no asc";
             dbc.DA.SelectCommand = dbc.DCom;
             dbc.DA.Fill(dbc.DS, "emp");
             empTable = dbc.DS.Tables["emp"];
@@ -103,7 +102,7 @@ namespace DBCSProject
             pEmail.Text = currRow["email"].ToString();
             pTel.Text = currRow["tel"].ToString();
             pRank.Text = currRow["rank"].ToString();
-            pDepartment.Text = currRow["dept"].ToString();
+            pDepartment.Text = currRow["name1"].ToString();
         }
     }
 }

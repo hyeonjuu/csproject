@@ -44,8 +44,6 @@ namespace DBCSProject
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -100,11 +98,13 @@ namespace DBCSProject
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(775, 412);
+            this.dataGridView1.Location = new System.Drawing.Point(775, 392);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(415, 105);
@@ -218,26 +218,6 @@ namespace DBCSProject
             this.monthCalendar1.TabIndex = 59;
             this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("돋움", 9F);
-            this.label2.Location = new System.Drawing.Point(824, 382);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 15);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "선택 기간 근무 시간 : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("돋움", 9F);
-            this.label3.Location = new System.Drawing.Point(987, 382);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 15);
-            this.label3.TabIndex = 62;
-            this.label3.Text = "50";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -293,14 +273,15 @@ namespace DBCSProject
             this.listView1.TabIndex = 77;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "이름";
+            this.columnHeader1.Text = "사번";
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "직급";
+            this.columnHeader2.Text = "이름";
             // 
             // columnHeader3
             // 
@@ -333,8 +314,6 @@ namespace DBCSProject
             this.Controls.Add(this.start);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.type);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.monthCalendar1);
@@ -364,8 +343,6 @@ namespace DBCSProject
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox time;
         private System.Windows.Forms.Button button2;

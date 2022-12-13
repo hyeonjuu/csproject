@@ -25,7 +25,20 @@ namespace DBCSProject
             dbc.DEPT = dept;
         }
 
+        public void gridView_header()
+        {
+            dataGridView1.Columns[0].HeaderText = "날짜";
+            dataGridView1.Columns[1].HeaderText = "사번";
+            dataGridView1.Columns[2].HeaderText = "이름";
+            dataGridView1.Columns[3].HeaderText = "직급";
+            dataGridView1.Columns[4].HeaderText = "유형";
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].HeaderText = "상태";
+            dataGridView1.Columns[9].Visible = false;
 
+        }
         private void getEmp()
         {
 ;           string searchT = dbc.DEPT;
@@ -113,13 +126,14 @@ namespace DBCSProject
             string selectItem = listView1.SelectedItems[0].Text.ToString();
 
 
-            sqlstr = "select e.no, e.name,e.rank,a.atndtype,a.atnddate,a.starttime,a.stoptime,a.note,a.confirm,a.time from emp e,attendance a where a.empno = e.no and e.no = '" + selectItem+"' and a.atnddate='"+atndDate+"' order by a.atnddate asc";
+            sqlstr = "select a.atnddate,e.no, e.name,e.rank,a.atndtype,a.starttime,a.stoptime,a.note,a.confirm,a.time from emp e,attendance a where a.empno = e.no and e.no = '" + selectItem+"' and a.atnddate='"+atndDate+"' order by a.atnddate asc";
             dbc.DS.Clear();
             dbc.DCom.CommandText = sqlstr;
             dbc.DA.SelectCommand = dbc.DCom;
             dbc.DA.Fill(dbc.DS, "emp");
             dbc.Table = dbc.DS.Tables["emp"];
             dataGridView1.DataSource = dbc.Table;
+            gridView_header();
 
             //"select e.no,e.name,d.name,e.rank from emp e, dept d where dept = " + searchT + " and e.dept = d.code order by no asc;";
         }
@@ -167,6 +181,7 @@ namespace DBCSProject
                 MessageBox.Show("근무 인정 시간 확인");
                 return;
             }
+                MessageBox.Show(confirm);
                 DBClass dbc = new DBClass();
                 dbc.DB_Access();
                 dbc.DB_Open();
@@ -185,27 +200,24 @@ namespace DBCSProject
 
             dbc.DCom.ExecuteNonQuery();
             MessageBox.Show("수정되었습니다.");
-                if (type.Text.Equals("휴가")){
-                    string month = DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString();
+                if (confirm.Equals("승인")) { 
+                    if (type.Text.Equals("휴가")){
+                        string month = DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString();
                     
-                    sqlstr = "update annualstatus set leftover = (total - (select sum(time) from attendance where empno = '"+ currRow["no"].ToString() + "' and atnddate like '"+month.Substring(2,5)+ "%' and atndtype = '휴가')) where empno = '" + currRow["no"].ToString() + "' and year = '" + DateTime.Now.Year.ToString() + "' and type = '연차'";
-                    dbc.DCom.CommandText = sqlstr;
-                    MessageBox.Show(currRow["no"].ToString());
-                    MessageBox.Show(DateTime.Now.Year.ToString());
-                    dbc.DCom.ExecuteNonQuery();
-                }
-                else
-                {
-                    string month = DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString();
+                        sqlstr = "update annualstatus set leftover = (total - (select sum(time) from attendance where empno = '"+ currRow["no"].ToString() + "' and atnddate like '"+month.Substring(2,5)+ "%' and atndtype = '휴가')) where empno = '" + currRow["no"].ToString() + "' and year = '" + DateTime.Now.Year.ToString() + "' and type = '연차'";
+                        dbc.DCom.CommandText = sqlstr;
+                        dbc.DCom.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        string month = DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString();
 
-                    sqlstr = "update workstatus set currenttime = (select sum(time) from attendance where empno =  '" + currRow["no"].ToString() + "' and atnddate like '" + month.Substring(2, 5) + "%' and(atndtype = '퇴근' or atndtype = '출근')) where empno =  '" + currRow["no"].ToString() + "' and month = '"+ month +"'";
-                    dbc.DCom.CommandText = sqlstr;
-                    MessageBox.Show(currRow["no"].ToString());
-                    MessageBox.Show(DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString());
-                    dbc.DCom.ExecuteNonQuery();
+                        sqlstr = "update workstatus set currenttime = (select sum(time) from attendance where empno =  '" + currRow["no"].ToString() + "' and atnddate like '" + month.Substring(2, 5) + "%' and(atndtype = '퇴근' or atndtype = '출근')) where empno =  '" + currRow["no"].ToString() + "' and month = '"+ month +"'";
+                        dbc.DCom.CommandText = sqlstr;
+                        dbc.DCom.ExecuteNonQuery();
+                    }
                 }
-            
-            
+
             }
             catch (Exception de)
             {
@@ -213,5 +225,25 @@ namespace DBCSProject
             }
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectItem = null;
+            if(listView1.SelectedItems.Count > 0) { 
+            selectItem = listView1.SelectedItems[0].SubItems[0].Text;
+            }
+
+            sqlstr = "select a.atnddate, e.no, e.name,e.rank,a.atndtype,a.starttime,a.stoptime,a.note,a.confirm,a.time from emp e,attendance a where a.empno = e.no and e.no = '" + selectItem + "' and a.confirm = '미승인' order by a.atnddate asc";
+            dbc.DS.Clear();
+            dbc.DCom.CommandText = sqlstr;
+            dbc.DA.SelectCommand = dbc.DCom;
+            dbc.DA.Fill(dbc.DS, "emp");
+            dbc.Table = dbc.DS.Tables["emp"];
+            dataGridView1.DataSource = dbc.Table;
+            gridView_header();
+
+        }
+
+        
     }
 }
